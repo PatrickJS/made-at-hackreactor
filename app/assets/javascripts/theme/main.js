@@ -77,10 +77,10 @@ CHAKRA.slider = function(){
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
-											{image : 'slider-images/image01.jpg', title : '<div class="slide-content">Chakra</div>', thumb : '', url : ''},
-											{image : 'slider-images/image02.jpg', title : '<div class="slide-content">Responsive Design</div>', thumb : '', url : ''},
-											{image : 'slider-images/image03.jpg', title : '<div class="slide-content">FullScreen Gallery</div>', thumb : '', url : ''},
-											{image : 'slider-images/image04.jpg', title : '<div class="slide-content">Showcase Your Work</div>', thumb : '', url : ''}
+											{image : 'assets/slider-images/image01.jpg', title : '<div class="slide-content">Chakra</div>', thumb : '', url : ''},
+											{image : 'assets/slider-images/image02.jpg', title : '<div class="slide-content">Responsive Design</div>', thumb : '', url : ''},
+											{image : 'assets/slider-images/image03.jpg', title : '<div class="slide-content">FullScreen Gallery</div>', thumb : '', url : ''},
+											{image : 'assets/slider-images/image04.jpg', title : '<div class="slide-content">Showcase Your Work</div>', thumb : '', url : ''}
 									],
 
 		// Theme Options
@@ -452,7 +452,7 @@ CHAKRA.map = function(){
 
 			var map = new google.maps.Map(document.getElementById($map_id), options);
 
-			var image = 'marker.png';
+			var image = 'assets/marker.png';
 			var marker = new google.maps.Marker({
 				position: latlng,
 				map: map,
