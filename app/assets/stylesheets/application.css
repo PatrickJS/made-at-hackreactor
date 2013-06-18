@@ -10,7 +10,11 @@
  *
  *= require_self
  *= require bootstrap
+ *= require main
  *= require application
- *= require_tree ./theme
+ *= require ./theme/main
+ *= require ./theme/fonts
+ *= require ./theme/shortcodes
+ *= require ./theme/responsive
  *= require_tree .
  */

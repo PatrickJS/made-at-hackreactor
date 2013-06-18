@@ -31,7 +31,7 @@ module Api
       @website = Website.new(params[:website])
 
       if @website.save
-        render json: @website, status: :created, location: @website
+        render json: @website, status: :created
       else
         render json: @website.errors, status: :unprocessable_entity
       end
