@@ -18,8 +18,8 @@ html, body {
 
 html, hmtl a{
 	width:100%;
-	font-size: 100%; 
-	-webkit-text-size-adjust: 100%; 
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
 
@@ -34,11 +34,11 @@ body{
 
 
 a{
-	color:#DE5E60;
+	color:#2874dc;
 	text-decoration: none;
 	cursor: pointer;
-	
-	-webkit-transition: color 0.1s linear 0s;	
+
+	-webkit-transition: color 0.1s linear 0s;
 	   -moz-transition: color 0.1s linear 0s;
 		 -o-transition: color 0.1s linear 0s;
 		    transition: color 0.1s linear 0s;
@@ -57,11 +57,11 @@ a img {
 }
 
 a > img {
-	vertical-align: bottom;	
+	vertical-align: bottom;
 }
 
 img {
-	max-width: none;	
+	max-width: none;
 }
 
 strong {
@@ -78,7 +78,7 @@ hr {
 	border-bottom: none;
 	border-left: none;
 	border-right: none;
-	margin: 50px 0;	
+	margin: 50px 0;
 }
 
 ul {
@@ -108,11 +108,11 @@ li {
 }
 
 .text-align-right {
-	text-align: right;	
+	text-align: right;
 }
 
 .color-text {
-    color: #DE5E60;
+    color: #2874dc;
 }
 
 .through{
@@ -125,7 +125,7 @@ input, button, select, textarea {
 	outline: 0;
 }
 
-input:focus, 
+input:focus,
 textarea:focus,
 input[type="text"]:focus {
 	outline: 0;
@@ -300,7 +300,7 @@ h3.spec {
    Separator
 ================================================== */
 
-.sep {	
+.sep {
 	margin: 0 0 70px;
 	text-align: center;
 }
@@ -323,7 +323,7 @@ h3.spec {
 	height: 100%;
 }
 
-#home-slider .overlay { 
+#home-slider .overlay {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -334,7 +334,7 @@ h3.spec {
 }
 
 #home-slider .container {
-	height: 100%;	
+	height: 100%;
 }
 
 #home-slider .container .row {
@@ -344,13 +344,13 @@ h3.spec {
 
 #home-slider .slider-text {
 	position: relative;
-	z-index: 2;	
+	z-index: 2;
 	text-align: center;
 }
 
 #home-slider #slidecaption {
 	float: none;
-	text-shadow: none;	
+	text-shadow: none;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 60px;
 	font-weight: 300;
@@ -384,15 +384,15 @@ h3.spec {
 	height: 50px;
 	opacity: 1;
 	filter: alpha(opacity=100);
-	
-	-webkit-transition: background 0.1s linear 0s;	
+
+	-webkit-transition: background 0.1s linear 0s;
 	   -moz-transition: background 0.1s linear 0s;
 		 -o-transition: background 0.1s linear 0s;
 		    transition: background 0.1s linear 0s;
 }
 
 #home-slider #nextslide {
-	margin-left: -3px;	
+	margin-left: -3px;
 }
 
 #home-slider #nextsection {
@@ -401,7 +401,7 @@ h3.spec {
 
 #home-slider #nextslide:hover,
 #home-slider #prevslide:hover {
-	background-color:#DE5E60;
+	background-color:#2874dc;
 }
 
 #home-slider #nextslide i,
@@ -416,17 +416,17 @@ h3.spec {
 }
 
 #home-slider #nextslide i {
-	margin-left: -8px;	
+	margin-left: -8px;
 }
 
 #home-slider #prevslide i {
-	margin-left: -9px;	
+	margin-left: -9px;
 }
 
 #home-slider ul#slide-list {
 	top: 50%;
 	padding: 0;
-	margin:-6px 0 0 0;	
+	margin:-6px 0 0 0;
 }
 
 #home-slider ul#slide-list li {
@@ -434,7 +434,7 @@ h3.spec {
 }
 
 #home-slider ul#slide-list li:last-child {
-	margin-right: 0;	
+	margin-right: 0;
 }
 
 #home-slider ul#slide-list li a {
@@ -442,24 +442,24 @@ h3.spec {
 	background-image: none;
 	width: 12px;
 	height: 12px;
-	
+
 	-webkit-border-radius: 999px;
 	-moz-border-radius: 999px;
-	border-radius: 999px;	
-	
-	-webkit-transition: background 0.1s linear 0s;	
+	border-radius: 999px;
+
+	-webkit-transition: background 0.1s linear 0s;
 	   -moz-transition: background 0.1s linear 0s;
 		 -o-transition: background 0.1s linear 0s;
 		    transition: background 0.1s linear 0s;
 }
 
 #home-slider ul#slide-list li a:hover {
-	background-color: #FFFFFF;	
+	background-color: #FFFFFF;
 }
 
 #home-slider ul#slide-list li.current-slide a,
 #home-slider ul#slide-list li.current-slide a:hover {
-	background-color:#DE5E60;
+	background-color:#2874dc;
 }
 
 #home-slider #nextsection {
@@ -469,15 +469,15 @@ h3.spec {
 	float:right;
 	width: 50px;
 	height: 50px;
-	
-	-webkit-transition: background 0.1s linear 0s;	
+
+	-webkit-transition: background 0.1s linear 0s;
 	   -moz-transition: background 0.1s linear 0s;
 		 -o-transition: background 0.1s linear 0s;
 		    transition: background 0.1s linear 0s;
 }
 
 #home-slider #nextsection:hover {
-	background-color:#DE5E60;
+	background-color:#2874dc;
 }
 
 #home-slider #nextsection i {
@@ -491,7 +491,7 @@ h3.spec {
 }
 
 #home-slider #nextsection i {
-	margin-left: -7px;	
+	margin-left: -7px;
 }
 
 
@@ -510,7 +510,7 @@ header .sticky-nav {
 	height: 60px;
 	background: #26292E;
 	z-index: 1001;
-	
+
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
@@ -531,23 +531,23 @@ header #logo {
 }
 
 header #logo a {
-	background: url(../img/logo.png) no-repeat;
+	background: url(../../assets/hackreactor_@2x.png) no-repeat;
 	width: 96px;
 	height: 30px;
 	text-indent: -9999px;
 	display: block;
 	opacity: 1;
 	filter: alpha(opacity=100);
-	
-	-webkit-transition: opacity 0.25s ease-in-out 0s;	
+
+	-webkit-transition: opacity 0.25s ease-in-out 0s;
 	   -moz-transition: opacity 0.25s ease-in-out 0s;
 		 -o-transition: opacity 0.25s ease-in-out 0s;
-		    transition: opacity 0.25s ease-in-out 0s;	
+		    transition: opacity 0.25s ease-in-out 0s;
 }
 
 header #logo a:hover {
 	opacity: 0.65;
-	filter: alpha(opacity=65);	
+	filter: alpha(opacity=65);
 }
 
 nav#menu {
@@ -557,17 +557,17 @@ nav#menu {
 
 nav#menu #menu-nav {
 	margin: 0;
-	padding: 0;	
+	padding: 0;
 }
 
 nav#menu #menu-nav li {
 	list-style: none;
 	display: inline-block;
-	margin-left: 30px;	
+	margin-left: 30px;
 }
 
 nav#menu #menu-nav li:first-child {
-	margin-left: 0;	
+	margin-left: 0;
 }
 
 nav#menu #menu-nav li a {
@@ -581,7 +581,7 @@ nav#menu #menu-nav li a {
 
 nav#menu #menu-nav li.current a,
 nav#menu #menu-nav li a:hover {
-	color: #DE5E60;
+	color: #2874dc;
 }
 
 
@@ -590,7 +590,7 @@ nav#menu #menu-nav li a:hover {
 ================================================== */
 
 #mobile-nav {
-	display: none;	
+	display: none;
 }
 
 .menu-nav {
@@ -599,14 +599,14 @@ nav#menu #menu-nav li a:hover {
 	height: 16px;
 	display: block;
 	margin: 22px 0 0 0;
-	
+
 	-webkit-transform: rotate(0deg);
 	   -moz-transform: rotate(0deg);
 		-ms-transform: rotate(0deg);
 		 -o-transform: rotate(0deg);
 			transform: rotate(0deg);
-	
-	-webkit-transition: -webkit-transform 250ms ease-out 0s;	
+
+	-webkit-transition: -webkit-transform 250ms ease-out 0s;
 	   -moz-transition: -moz-transform 250ms ease-out 0s;
 		 -o-transition: -o-transform 250ms ease-out 0s;
 		    transition: transform 250ms ease-out 0s;
@@ -614,24 +614,24 @@ nav#menu #menu-nav li a:hover {
 
 .menu-nav.open {
 	background-position: 0 -16px;
-		  
+
 	-webkit-transform: rotate(-180deg);
 	   -moz-transform: rotate(-180deg);
 		-ms-transform: rotate(-180deg);
 		 -o-transform: rotate(-180deg);
 			transform: rotate(-180deg);
-	
-	-webkit-transition: -webkit-transform 250ms ease-out 0s;	
+
+	-webkit-transition: -webkit-transform 250ms ease-out 0s;
 	   -moz-transition: -moz-transform 250ms ease-out 0s;
 		 -o-transition: -o-transform 250ms ease-out 0s;
-		    transition: transform 250ms ease-out 0s;	
+		    transition: transform 250ms ease-out 0s;
 }
 
 #navigation-mobile {
 	display: none;
 	text-align: right;
 	width: 100%;
-	background: #26292E;	
+	background: #26292E;
 	border-bottom: 1px solid #2F3238;
 	position: relative;
 	float: left;
@@ -671,7 +671,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .title-page {
-	margin-bottom: 80px;	
+	margin-bottom: 80px;
 }
 
 .title-page .title {
@@ -716,8 +716,8 @@ nav#menu #menu-nav li a:hover {
 .work-nav #filters li a {
 	color: #7F8289;
 	font-size: 13px;
-	text-transform: uppercase;	
-	display: block;	
+	text-transform: uppercase;
+	display: block;
 }
 
 .work-nav #filters li a:hover {
@@ -725,12 +725,12 @@ nav#menu #menu-nav li a:hover {
 }
 
 .work-nav #filters li a.selected {
-	color: #DE5E60;
+	color: #2874dc;
 }
 
 #thumbs {
 	margin: 0;
-	padding: 0;	
+	padding: 0;
 }
 
 #thumbs li {
@@ -745,7 +745,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .item-thumbs a + img {
-	width: 100%;	
+	width: 100%;
 }
 
 .item-thumbs .hover-wrap {
@@ -753,11 +753,11 @@ nav#menu #menu-nav li a:hover {
 	display: block;
 	width: 100%;
 	height: 100%;
-	
+
 	opacity: 0;
 	filter: alpha(opacity=0);
-	
-	-webkit-transition: opacity 250ms ease-out 0s;	
+
+	-webkit-transition: opacity 250ms ease-out 0s;
 	   -moz-transition: opacity 250ms ease-out 0s;
 		 -o-transition: opacity 250ms ease-out 0s;
 		    transition: opacity 250ms ease-out 0s;
@@ -773,8 +773,8 @@ nav#menu #menu-nav li a:hover {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #DE5E60;
-	
+	background: #2874dc;
+
 	opacity: 0.45;
 	filter: alpha(opacity=45);
 }
@@ -787,7 +787,7 @@ nav#menu #menu-nav li a:hover {
 	color: #FFFFFF;
 	font-size: 32px;
 	line-height: 1em;
-	
+
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
@@ -798,11 +798,11 @@ nav#menu #menu-nav li a:hover {
 ================================================== */
 
 .profile-name {
-	margin-bottom: 15px;	
+	margin-bottom: 15px;
 }
 
 .profile-description {
-	margin-bottom: 25px;	
+	margin-bottom: 25px;
 }
 
 .image-wrap {
@@ -813,7 +813,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .image-wrap img {
-	width: 100%;	
+	width: 100%;
 }
 
 .image-wrap  .hover-wrap {
@@ -821,11 +821,11 @@ nav#menu #menu-nav li a:hover {
 	display: block;
 	width: 100%;
 	height: 100%;
-	
+
 	opacity: 0;
 	filter: alpha(opacity=0);
-	
-	-webkit-transition: opacity 250ms ease-out 0s;	
+
+	-webkit-transition: opacity 250ms ease-out 0s;
 	   -moz-transition: opacity 250ms ease-out 0s;
 		 -o-transition: opacity 250ms ease-out 0s;
 		    transition: opacity 250ms ease-out 0s;
@@ -841,8 +841,8 @@ nav#menu #menu-nav li a:hover {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #DE5E60;
-	
+	background: #2874dc;
+
 	opacity: 0.45;
 	filter: alpha(opacity=45);
 }
@@ -859,7 +859,7 @@ nav#menu #menu-nav li a:hover {
 	line-height: 32px;
 	text-transform: uppercase;
 	text-align: center;
-	
+
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
@@ -871,7 +871,7 @@ nav#menu #menu-nav li a:hover {
 
 .social-icons li {
 	display: inline-block;
-	margin-left: 15px;	
+	margin-left: 15px;
 }
 
 .social-icons li:first-child {
@@ -884,11 +884,11 @@ nav#menu #menu-nav li a:hover {
 	line-height: 1em;
 	width: 16px;
 	height: 16px;
-	
+
 	opacity: 0.3;
 	filter: alpha(opacity=30);
-	
-	-webkit-transition: opacity 0.1s linear 0s;	
+
+	-webkit-transition: opacity 0.1s linear 0s;
 	   -moz-transition: opacity 0.1s linear 0s;
 		 -o-transition: opacity 0.1s linear 0s;
 		    transition: opacity 0.1s linear 0s;
@@ -904,18 +904,18 @@ nav#menu #menu-nav li a:hover {
 ================================================== */
 
 .big-quote {
-	text-align: center;	
+	text-align: center;
 }
 
 .big-quote p {
 	font-size: 36px;
 	color: #FFFFFF;
-	line-height: 48px;	
+	line-height: 48px;
 }
 
 .big-quote span {
 	font-size: 32px;
-	color: #DE5E60;	
+	color: #2874dc;
 }
 
 /* ==================================================
@@ -927,13 +927,13 @@ nav#menu #menu-nav li a:hover {
 }
 
 .services-box .icon {
-	background: #DE5E60;
+	background: #2874dc;
     display: inline-block;
     height: 160px;
     position: relative;
     width: 160px;
 	margin-bottom: 40px;
-	
+
 	-webkit-border-radius: 999px;
 	-moz-border-radius: 999px;
 	border-radius: 999px;
@@ -942,7 +942,7 @@ nav#menu #menu-nav li a:hover {
 .services-box .icon span {
 	color: #FFFFFF;
 	font-size: 60px;
-	line-height: 160px;	
+	line-height: 160px;
 }
 
 
@@ -951,11 +951,11 @@ nav#menu #menu-nav li a:hover {
 ================================================== */
 
 #map-area {
-	width: 100%;	
+	width: 100%;
 }
 
 .map {
-	height: 600px;	
+	height: 600px;
 }
 
 /* ==================================================
@@ -972,20 +972,20 @@ nav#menu #menu-nav li a:hover {
 .post:first-child {
 	border-top: none;
 	margin: 0;
-	padding: 0;	
+	padding: 0;
 }
 
 .post-thumb {
-	margin-bottom: 30px;	
+	margin-bottom: 30px;
 }
 
 .post-thumb a {
 	position: relative;
-	display: block;	
+	display: block;
 }
 
 .post-thumb img {
-	width: 100%;	
+	width: 100%;
 }
 
 .entry-title,
@@ -998,10 +998,10 @@ nav#menu #menu-nav li a:hover {
 }
 
 .entry-title a:hover {
-	color: #DE5E60;
+	color: #2874dc;
 }
 
-.entry-meta, 
+.entry-meta,
 .entry-meta a {
     color: #FFFFFF;
     font-size: 12px;
@@ -1010,7 +1010,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .entry-meta a:hover {
-	color: #DE5E60;
+	color: #2874dc;
 }
 
 .entry-meta {
@@ -1022,7 +1022,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .entry-content .more-link {
-	display: block;	
+	display: block;
 }
 
 .entry-meta.entry-footer {
@@ -1037,7 +1037,7 @@ nav#menu #menu-nav li a:hover {
     margin: 100px 0 0;
 }
 
-.comments-title, 
+.comments-title,
 #reply-title {
     border-bottom: 1px dashed #3C3F45;
     font-size: 28px;
@@ -1065,7 +1065,7 @@ nav#menu #menu-nav li a:hover {
 	-webkit-border-radius: 999px;
 	   -moz-border-radius: 999px;
     		border-radius: 999px;
-			
+
     display: block;
     height: 50px;
     width: 50px;
@@ -1075,7 +1075,7 @@ nav#menu #menu-nav li a:hover {
     margin-left: 80px;
 }
 
-.comment-author cite, 
+.comment-author cite,
 .comment-author cite a {
     color: #FFFFFF;
     font-size: 22px;
@@ -1084,14 +1084,14 @@ nav#menu #menu-nav li a:hover {
 }
 
 .comment-author cite a:hover {
-	color: #DE5E60;
+	color: #2874dc;
 }
 
 .comment-meta {
     margin: 8px 0 15px;
 }
 
-.comment-meta, 
+.comment-meta,
 .comment-meta a {
     color: #FFFFFF;
     font-size: 12px;
@@ -1101,7 +1101,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .comment-meta a:hover {
-	color: #DE5E60;
+	color: #2874dc;
 }
 
 .comment-body {
@@ -1129,11 +1129,11 @@ nav#menu #menu-nav li a:hover {
 ================================================== */
 
 #comment-form {
-	margin-bottom: 0;	
+	margin-bottom: 0;
 }
 
 #comment-form p {
-	margin-bottom: 1px;	
+	margin-bottom: 1px;
 }
 
 #comment-form input,
@@ -1142,18 +1142,18 @@ nav#menu #menu-nav li a:hover {
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
     border-radius: 0;
-	
+
     -webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
-	
+
 	background: #2F3238;
     color: #FFFFFF;
     font-size: 16px;
     height: auto;
     padding: 15px;
 	margin: 0;
-	
+
     resize: none;
 }
 
@@ -1184,15 +1184,15 @@ nav#menu #menu-nav li a:hover {
     vertical-align: middle;
     width: auto;
 	margin-top: 30px;
-	
-	-webkit-transition: background 0.1s linear 0s, color 0.1s linear 0s;	
+
+	-webkit-transition: background 0.1s linear 0s, color 0.1s linear 0s;
 	   -moz-transition: background 0.1s linear 0s, color 0.1s linear 0s;
 		 -o-transition: background 0.1s linear 0s, color 0.1s linear 0s;
 		    transition: background 0.1s linear 0s, color 0.1s linear 0s;
 }
 
 #comment-form .submit:hover {
-    background: #DE5E60;
+    background: #2874dc;
     color: #FFFFFF;
 }
 
@@ -1208,7 +1208,7 @@ nav#menu #menu-nav li a:hover {
     text-align: center;
 }
 
-.navigation .prev, 
+.navigation .prev,
 .navigation .next {
 	background-color: #2F3238;
 	color: #FFFFFF;
@@ -1217,8 +1217,8 @@ nav#menu #menu-nav li a:hover {
 	margin: 2px 1px;
 	position: relative;
 	padding: 10px 24px;
-	
-	-webkit-transition: background 0.1s linear 0s;	
+
+	-webkit-transition: background 0.1s linear 0s;
 	   -moz-transition: background 0.1s linear 0s;
 		 -o-transition: background 0.1s linear 0s;
 		    transition: background 0.1s linear 0s;
@@ -1232,18 +1232,18 @@ nav#menu #menu-nav li a:hover {
 	color: #FFFFFF;
 	font-weight: 400;
 	padding: 10px 24px;
-		
-	-webkit-transition: background 0.1s linear 0s;	
+
+	-webkit-transition: background 0.1s linear 0s;
 	   -moz-transition: background 0.1s linear 0s;
 		 -o-transition: background 0.1s linear 0s;
 		    transition: background 0.1s linear 0s;
 }
 
-.navigation .prev:hover, 
+.navigation .prev:hover,
 .navigation .next:hover,
 .navigation .number:hover,
 .navigation .current {
-	background-color:#DE5E60;
+	background-color:#2874dc;
 }
 
 
@@ -1263,21 +1263,21 @@ nav#menu #menu-nav li a:hover {
 .contact-details ul {
 	margin: 0;
 	padding: 0;
-	list-style: none;	
+	list-style: none;
 }
 
 .contact-details ul li {
 	margin: 0 0 20px;
 	line-height: 28px;
-	padding: 0;	
+	padding: 0;
 }
 
 #contact-form {
-	margin-bottom: 0;	
+	margin-bottom: 0;
 }
 
 #contact-form p {
-	margin-bottom: 1px;	
+	margin-bottom: 1px;
 }
 
 #contact-form input,
@@ -1286,18 +1286,18 @@ nav#menu #menu-nav li a:hover {
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
     border-radius: 0;
-	
+
     -webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
-	
+
 	background: #26292E;
     color: #FFFFFF;
     font-size: 16px;
     height: auto;
     padding: 15px;
 	margin: 0;
-	
+
     resize: none;
 }
 
@@ -1328,15 +1328,15 @@ nav#menu #menu-nav li a:hover {
     vertical-align: middle;
     width: auto;
 	margin-top: 30px;
-	
-	-webkit-transition: background 0.1s linear 0s, color 0.1s linear 0s;	
+
+	-webkit-transition: background 0.1s linear 0s, color 0.1s linear 0s;
 	   -moz-transition: background 0.1s linear 0s, color 0.1s linear 0s;
 		 -o-transition: background 0.1s linear 0s, color 0.1s linear 0s;
 		    transition: background 0.1s linear 0s, color 0.1s linear 0s;
 }
 
 #contact-form .submit:hover {
-    background: #DE5E60;
+    background: #2874dc;
     color: #FFFFFF;
 }
 
@@ -1352,7 +1352,7 @@ nav#menu #menu-nav li a:hover {
 
 #twitter-feed {
 	padding: 100px 0 90px;
-	text-align: center;	
+	text-align: center;
 }
 
 #twitter-feed .follow {
@@ -1360,7 +1360,7 @@ nav#menu #menu-nav li a:hover {
 	bottom: 30px;
 	left: 50%;
 	margin-left: -8px;
-	font-size: 16px;	
+	font-size: 16px;
 }
 
 #ticker .tweet_list {
@@ -1368,7 +1368,7 @@ nav#menu #menu-nav li a:hover {
 	padding: 0;
 	height: 64px;
 	list-style: none;
-	overflow-y: hidden;	
+	overflow-y: hidden;
 }
 
 #ticker .tweet_list li {
@@ -1382,11 +1382,11 @@ nav#menu #menu-nav li a:hover {
 	color: #7f8289;
 	font-size: 14px;
 	font-style: italic;
-	margin-left: 10px;	
+	margin-left: 10px;
 }
 
 #ticker .tweet_list .tweet_time a:hover {
-	color: #FFFFFF;	
+	color: #FFFFFF;
 }
 
 
@@ -1420,12 +1420,12 @@ nav#menu #menu-nav li a:hover {
 	height: 70px;
 
 	background: #26292E;
-	
-	-webkit-transition: all 400ms ease-out 0s;	
+
+	-webkit-transition: all 400ms ease-out 0s;
 	   -moz-transition: all 400ms ease-out 0s;
 		 -o-transition: all 400ms ease-out 0s;
 		    transition: all 400ms ease-out 0s;
-	
+
 	-webkit-transform: rotateY(0deg);
 	   -moz-transform: rotateY(0deg);
 		-ms-transform: rotateY(0deg);
@@ -1439,15 +1439,15 @@ nav#menu #menu-nav li a:hover {
 	color: #55606a;
 	font-size: 32px;
 	line-height: 70px;
-	
+
 	opacity: 0.3;
 	filter: alpha(opacity=30);
-	
-	-webkit-transition: all 400ms ease-out 0s;	
+
+	-webkit-transition: all 400ms ease-out 0s;
 	   -moz-transition: all 400ms ease-out 0s;
 		 -o-transition: all 400ms ease-out 0s;
 		    transition: all 400ms ease-out 0s;
-		  
+
 	-webkit-transform: rotateY(0deg);
 	   -moz-transform: rotateY(0deg);
 		-ms-transform: rotateY(0deg);
@@ -1457,8 +1457,8 @@ nav#menu #menu-nav li a:hover {
 
 #social ul li:hover a,
 #social ul li.active a {
-	background-color: #DE5E60;	
-	
+	background-color: #2874dc;
+
 	-webkit-transform: rotateY(180deg);
 	   -moz-transform: rotateY(180deg);
 		-ms-transform: rotateY(180deg);
@@ -1471,7 +1471,7 @@ nav#menu #menu-nav li a:hover {
 	color: #FFFFFF;
 	opacity: 1;
 	filter: alpha(opacity=100);
-	
+
 	-webkit-transform: rotateY(180deg);
 	   -moz-transform: rotateY(180deg);
 		-ms-transform: rotateY(180deg);
@@ -1497,7 +1497,7 @@ footer .credits {
 	font-size: 13px;
 	margin-bottom: 0;
 	padding: 20px 0;
-	text-transform: uppercase;	
+	text-transform: uppercase;
 }
 
 /* ==================================================
@@ -1514,15 +1514,15 @@ footer .credits {
 	width: 50px;
 	height: 50px;
 	z-index: 99;
-	
-	-webkit-transition: background 0.1s linear 0s;	
+
+	-webkit-transition: background 0.1s linear 0s;
 	   -moz-transition: background 0.1s linear 0s;
 		 -o-transition: background 0.1s linear 0s;
 		    transition: background 0.1s linear 0s;
 }
 
 #back-to-top:hover {
-	background-color:#DE5E60;
+	background-color:#2874dc;
 }
 
 #back-to-top i {
@@ -1536,7 +1536,7 @@ footer .credits {
 }
 
 #back-to-top i {
-	margin-left: -7px;	
+	margin-left: -7px;
 }
 
 
@@ -1566,7 +1566,7 @@ footer .credits {
 	position: relative !important;
 	width: 100% !important;
 	height: 100% !important;
-	top: 0 !important;	
+	top: 0 !important;
 }
 
 #jprePercentage {
@@ -1579,9 +1579,9 @@ footer .credits {
 	top: 50%;
 	margin: -25px 0 0 -25px;
 	z-index: 800;
-	
+
 	font-size: 24px;
-	color: #FFFFFF;	
+	color: #FFFFFF;
 
 	-webkit-animation: circle 1s infinite forwards;
 	   -moz-animation: circle 1s infinite forwards;
@@ -1598,11 +1598,11 @@ footer .credits {
 	margin: -50px 0 0 -50px;
 	width: 100px;
 	height: 100px;
-	background: #DE5E60;
+	background: #2874dc;
 	-webkit-border-radius: 999px;
 	-moz-border-radius: 999px;
 	border-radius: 999px;
-			
+
 	-webkit-animation: circle 1s infinite forwards;
 	   -moz-animation: circle 1s infinite forwards;
 		-ms-animation: circle 1s infinite forwards;
