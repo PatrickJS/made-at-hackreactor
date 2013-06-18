@@ -7,52 +7,11 @@
 <!-- End of Splash Screen -->
 
 <!-- Homepage Slider -->
-<div id="home-slider">
-    <div class="overlay"></div>
-
-  <div class="container">
-      <div class="row">
-          <div class="span12">
-                <div class="slider-text">
-                    <div id="slidecaption"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-  <div class="control-nav">
-        <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>
-        <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>
-        <ul id="slide-list"></ul>
-
-        <a id="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a>
-    </div>
-</div>
+<%= render 'layouts/slider' %>
 <!-- End Homepage Slider -->
 
 <!-- Header -->
-<header>
-    <div class="sticky-nav">
-      <a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
-
-        <div id="logo">
-          <a id="goUp" href="#" title="Hack Reactor">Hack Reactor</a>
-        </div>
-
-        <nav id="menu">
-          <ul id="menu-nav">
-              <li class="current"><a href="#home-slider">Home</a></li>
-                <li><a href="#work">Our Work</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="blog.html" class="external">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-        <li><a href="shortcodes.html" class="external">Shortcodes</a></li>
-            </ul>
-        </nav>
-
-    </div>
-</header>
+<%= render 'layouts/navbar' %>
 <!-- End Header -->
 
 <!-- Our Work Section -->
@@ -565,14 +524,14 @@
           <div class="contact-details">
             <h3>Contact Details</h3>
                 <ul>
-                    <li><a href="#">hello@chakra.com</a></li>
-                    <li>(916) 375-2525</li>
+                    <li><a href="#">hello@hackreactor.com</a></li>
+                    <li>(555) 555.5555</li>
                     <li>
-                        Chakra Studio
+                        Hack Reactor
                         <br>
-                        5240 Vanish Island. 105
+                        Market Street
                         <br>
-                        Unknow
+                        San Francisco
                     </li>
                 </ul>
             </div>
@@ -626,7 +585,8 @@
 
 <!-- Footer -->
 <footer>
-  <p class="credits">&copy;2013 Chakra. <a href="http://themes.alessioatzeni.com/html/chakra/" title="Chakra | Responsive One Page Template">Chakra Template</a> by <a href="http://www.alessioatzeni.com/" title="Alessio Atzeni | Web Designer &amp; Front-end Developer">Alessio Atzeni</a></p>
+  Copyright 2013, Hack Reactor, LLC. All rights reserved.
+  <p class="credits">&copy;2013 Made at HackReactor. Hack Reactor, LLC. All rights reserved.</p>
 </footer>
 <!-- End Footer -->
 
