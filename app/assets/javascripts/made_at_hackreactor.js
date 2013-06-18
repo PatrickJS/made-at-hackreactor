@@ -8,6 +8,4 @@ window.MadeAtHackreactor = {
   }
 };
 
-$(document).ready(function(){
-  MadeAtHackreactor.initialize();
-});
+MadeAtHackreactor.initialize();

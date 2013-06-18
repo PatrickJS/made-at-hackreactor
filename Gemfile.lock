@@ -43,9 +43,6 @@ GEM
       sass (~> 3.2)
     builder (3.0.4)
     coderay (1.0.9)
-    coffee-rails (3.2.2)
-      coffee-script (>= 2.2.0)
-      railties (~> 3.2.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -140,7 +137,6 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass
-  coffee-rails (~> 3.2.1)
   jquery-rails
   newrelic_rpm
   pg
