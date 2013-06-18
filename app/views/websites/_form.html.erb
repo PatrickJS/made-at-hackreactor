@@ -1,0 +1,33 @@
+<%= form_for(@website) do |f| %>
+  <% if @website.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@website.errors.count, "error") %> prohibited this website from being saved:</h2>
+
+      <ul>
+      <% @website.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :views %><br />
+    <%= f.number_field :views %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :team %><br />
+    <%= f.text_field :team %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
