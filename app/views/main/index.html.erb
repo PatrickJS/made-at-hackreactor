@@ -6,14 +6,6 @@
 </div> -->
 <!-- End of Splash Screen -->
 
-<!-- Homepage Slider -->
-<%= render 'layouts/slider' %>
-<!-- End Homepage Slider -->
-
-<!-- Header -->
-<%= render 'layouts/navbar' %>
-<!-- End Header -->
-
 <!-- Our Work Section -->
 <div id="work" class="page">
   <div class="container">
@@ -21,15 +13,15 @@
         <div class="row">
             <div class="span12">
                 <div class="title-page">
-                    <h2 class="title">Student Work</h2>
-                    <h3 class="title-description">Web app made by our students.</h3>
+                    <h2 class="title">Web applications built by our Students</h2>
+                    <!-- <h3 class="title-description">Web app made by our students.</h3> -->
 
-                    <div class="page-description">
+<!--                     <div class="page-description">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ligula odio. Sed id metus felis. Ut pretium nisl non justo condimentum id tincidunt nunc faucibus.
                     Ut neque eros, pulvinar eu blandit quis, lacinia nec ipsum. Etiam vel orci ipsum. Sed eget velit ipsum. Duis in tortor scelerisque felis mattis imperdiet. Donec at libero tellus.
                     <a href="#">Suspendisse consectetur</a> consectetur bibendum. Pellentesque posuere, ligula volutpat elementum interdum, diam arcu elementum ipsum, vel ultricies est mauris ut nisi.</p>
                   </div>
-
+ -->
                 </div>
             </div>
         </div>
@@ -139,7 +131,7 @@
     <div class="row">
         <div class="span12">
             <div class="title-page">
-                <h2 class="title">Get in Touch</h2>
+                <h2 class="title">Add your Website</h2>
                 <h3 class="title-description">Once you hack you can never go back.</h3>
 
                 <div class="page-description">
@@ -155,19 +147,18 @@
     <!-- Contact Form -->
     <div class="row">
       <div class="span9">
-
-          <form id="contact-form" class="contact-form" action="#">
+          <form id="contact-form" class="contact-form" action="/api/messages" method="post">
               <p class="contact-name">
-                <input id="contact_name" type="text" placeholder="Full Name" value="" name="name" />
+                <input id="contact_name" type="text" placeholder="Website" value="" name="url" />
                 </p>
                 <p class="contact-email">
-                  <input id="contact_email" type="text" placeholder="Email Address" value="" name="email" />
+                  <input id="contact_email" type="text" placeholder="Team Members" value="" name="team" />
                 </p>
                 <p class="contact-message">
-                  <textarea id="contact_message" placeholder="Your Message" name="message" rows="15" cols="40"></textarea>
+                  <textarea id="contact_message" placeholder="Description" name="content" rows="15" cols="40"></textarea>
                 </p>
                 <p class="contact-submit">
-                  <a id="contact-submit" class="submit" href="#">Send Your Email</a>
+                  <input type="submit" id="contact-submit" class="submit" value="Submit">
                 </p>
 
                 <div id="response">
