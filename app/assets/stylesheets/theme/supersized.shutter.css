@@ -39,13 +39,13 @@ ul#slide-list li a:hover{ background-position:0 -12px; cursor:pointer; }
 
 
 /* Progress Bar
-----------------------------*/					
+----------------------------*/
 #progress-back{ z-index:5; position:fixed; bottom:42px; left:0; height:8px; width:100%; background:url('../img/supersized/progress-back.png') repeat-x; }
 #progress-bar{ position:relative; height:8px; width:100%; background:url('../img/supersized/progress-bar.png') repeat-x; }
 
 
 /* Thumbnail Navigation
-----------------------------*/	
+----------------------------*/
 #nextthumb,#prevthumb { z-index:2; display:none; position:fixed; bottom:61px; height:75px; width:100px; overflow:hidden; background:#ddd; border:1px solid #fff; -webkit-box-shadow:0 0 5px #000; }
 #nextthumb { right:12px; }
 #prevthumb { left:12px; }
@@ -55,15 +55,15 @@ ul#slide-list li a:hover{ background-position:0 -12px; cursor:pointer; }
 
 
 /* Thumbnail Tray
-----------------------------*/			
+----------------------------*/
 #thumb-tray{ position:fixed; z-index:3; bottom:0; left:0; background:url(../img/bg-black.png); height:150px; width:100%; overflow:hidden; text-align:center; -moz-box-shadow: 0px 0px 4px #000; -webkit-box-shadow: 0px 0px 4px #000; box-shadow: 0px 0px 4px #000; }
 
 #thumb-back, #thumb-forward{ position:absolute; z-index:5; bottom:42px; height:108px; width:40px; }
 #thumb-back{ left:0; background: url('../img/supersized/thumb-back.png') no-repeat center center;}
 #thumb-forward{ right:0; background:url('../img/supersized/thumb-forward.png') no-repeat center center;}
-#thumb-back:hover, #thumb-forward:hover{ cursor:pointer; background-color:rgba(256,256,256, 0.1); }
-#thumb-back:hover{ border-right:1px solid rgba(256,256,256, 0.2); }
-#thumb-forward:hover{ border-left:1px solid rgba(256,256,256, 0.2); }
+#thumb-back:hover, #thumb-forward:hover{ cursor:pointer; background-color:rgba(255,255,255, 0.1); }
+#thumb-back:hover{ border-right:1px solid rgba(255,255,255, 0.2); }
+#thumb-forward:hover{ border-left:1px solid rgba(255,255,255, 0.2); }
 
 
 ul#thumb-list{ display:inline-block; list-style:none; position:relative; left:0px; padding:0 0px; }
