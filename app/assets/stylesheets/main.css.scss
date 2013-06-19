@@ -5,3 +5,8 @@
 .row {
   margin-left: -20px !important;
 }
+@media (max-width: 767px) {
+  [class*="span"] {
+    margin-left: 20px !important;
+  }
+}
