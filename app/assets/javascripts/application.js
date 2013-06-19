@@ -21,6 +21,7 @@
 //= require_tree ./views
 //= require_tree ./routers
 //= require_tree ./theme
+//= require ./theme/sticky
 //= require ./theme/main
 //= require_tree .
 

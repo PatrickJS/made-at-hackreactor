@@ -19,7 +19,7 @@
   	font-size: 16px;
   	cursor: pointer;
 	border:none;
-  
+
 	-webkit-transition: all 0.1s linear;
        -moz-transition: all 0.1s linear;
          -o-transition: all 0.1s linear;
@@ -33,7 +33,7 @@
 .button:hover,
 .button:active,
 .button:focus {
-	background-color: #DE5E60;
+	background-color: #2874dc;
 	color:#FFFFFF;
 }
 
@@ -57,13 +57,16 @@
 .button.button-block {
 	padding-right: 0;
 	padding-left: 0;
-	width: 100%;	
+	width: 100%;
 }
 
-.button + .button {
-	margin-left: 10px;	
+.button {
+  margin-right: 10px;
 }
-
+/*.button + .button {
+  margin-left: 10px;
+}
+*/
 /* ==================================================
    Accordion & Toggle
 ================================================== */
@@ -93,7 +96,7 @@
 	font-size: 18px;
 	font-weight: 600;
 	text-transform: uppercase;
-	
+
 	-webkit-transition: all 0.1s linear 0s;
 	-moz-transition: all 0.1s linear 0s;
 	-ms-transition: all 0.1s linear 0s;
@@ -107,12 +110,12 @@
 
 .accordion-heading:hover .accordion-toggle,
 .accordion-heading:hover .accordion-toggle.inactive {
-	background:#DE5E60;
+	background:#2874dc;
 	color:#FFFFFF;
 }
 
 .accordion-heading .accordion-toggle.active {
-	background:#DE5E60;
+	background:#2874dc;
 	color:#FFFFFF;
 }
 
@@ -128,7 +131,7 @@
     margin: -8px 0 0 0;
     color: #23262C;
     font-size: 18px;
-	
+
 	-webkit-transition: all 0.1s linear 0s;
 	-moz-transition: all 0.1s linear 0s;
 	-ms-transition: all 0.1s linear 0s;
@@ -142,7 +145,7 @@
 
 .accordion-heading .accordion-toggle.active span,
 .accordion-heading:hover .accordion-toggle.inactive span {
-	color: #FFFFFF;	
+	color: #FFFFFF;
 }
 
 .accordion-heading.accordionize .accordion-toggle.active span,
@@ -204,9 +207,9 @@
   	top: 2px;
   	right: -22px;
   	line-height: 20px;
-	color: #FFFFFF;	
+	color: #FFFFFF;
 	text-shadow: none;
-	
+
 	-webkit-transition: opacity 0.1s linear 0s;
 	-moz-transition: opacity 0.1s linear 0s;
 	-ms-transition: opacity 0.1s linear 0s;
@@ -215,7 +218,7 @@
 }
 
 .alert .close:hover {
-	opacity: 1;	
+	opacity: 1;
 }
 
 .alert-standard {
@@ -274,7 +277,7 @@
 
 .nav > li > a:hover,
 .nav > li > a:focus {
-  	background-color: #DE5E60;
+  	background-color: #2874dc;
 	color: #FFFFFF;
   	text-decoration: none;
   	display: block;
@@ -322,7 +325,7 @@
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
 	border: none;
-  	background-color: #DE5E60;
+  	background-color: #2874dc;
 	color: #FFFFFF;
   	cursor: default;
 }
@@ -363,7 +366,7 @@
 
 blockquote {
   	padding: 15px 20px;
-  	border-left: 2px solid #DE5E60;
+  	border-left: 2px solid #2874dc;
 }
 
 blockquote p {
@@ -479,32 +482,33 @@ blockquote small:before {
 ================================================== */
 
 .info-block {
-    border-left: 2px solid #DE5E60;
+    border-left: 2px solid #2874dc;
     overflow: hidden;
     padding: 20px;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .info-text {
-    padding-right: 20%;
+    /*padding-right: 20%;*/
     position: relative;
 }
 
 .info-block h3 {
     font-size: 24px;
 	line-height: 1.3em;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 
 .info-block p {
-	margin-bottom: 0;	
+	margin-bottom: 0;
 }
 
 .info-block a.button {
-    margin-top: -20px;
+/*    margin-top: -20px;
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 50%;*/
 }
 
 /* ==================================================
@@ -553,42 +557,42 @@ blockquote small:before {
 	-webkit-border-radius: 0;
        -moz-border-radius: 0;
             border-radius: 0;
-			
+
 	-webkit-box-shadow: none;
 	   -moz-box-shadow: none;
 			box-shadow: none;
-	
-	filter:progid:DXImageTransform.Microsoft.gradient(enabled = false); 
-	margin: 0;	
+
+	filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	margin: 0;
 }
 
 .progress .bar {
-	background-color: #DE5E60;
+	background-color: #2874dc;
 	background-image: none;
-	
+
 	-webkit-border-radius: 0;
        -moz-border-radius: 0;
             border-radius: 0;
-			
+
 	-webkit-box-shadow: none;
 	   -moz-box-shadow: none;
 			box-shadow: none;
-			
-	filter:progid:DXImageTransform.Microsoft.gradient(enabled = false); 
+
+	filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 
 .progress .field {
 	position: absolute;
 	color: #FFFFFF;
 	line-height: 44px;
-	left: 20px;	
+	left: 20px;
 }
 
 .progress .field-value {
 	position: absolute;
 	color: #FFFFFF;
 	line-height: 44px;
-	right: 20px;	
+	right: 20px;
 }
 
 /* ==================================================
@@ -603,7 +607,7 @@ blockquote small:before {
 }
 
 .lightbox a + img {
-	width: 100%;	
+	width: 100%;
 }
 
 .lightbox .hover-wrap {
@@ -611,11 +615,11 @@ blockquote small:before {
 	display: block;
 	width: 100%;
 	height: 100%;
-	
+
 	opacity: 0;
 	filter: alpha(opacity=0);
-	
-	-webkit-transition: opacity 250ms ease-out 0s;	
+
+	-webkit-transition: opacity 250ms ease-out 0s;
 	   -moz-transition: opacity 250ms ease-out 0s;
 		 -o-transition: opacity 250ms ease-out 0s;
 		    transition: opacity 250ms ease-out 0s;
@@ -631,8 +635,8 @@ blockquote small:before {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #DE5E60;
-	
+	background: #2874dc;
+
 	opacity: 0.45;
 	filter: alpha(opacity=45);
 }
@@ -645,7 +649,7 @@ blockquote small:before {
 	color: #FFFFFF;
 	font-size: 32px;
 	line-height: 1em;
-	
+
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
@@ -673,17 +677,17 @@ blockquote small:before {
 	height: 70px;
 
 	background: #26292E;
-	
-	-webkit-transition: all 400ms ease-out 0s;	
+
+	-webkit-transition: all 400ms ease-out 0s;
 	   -moz-transition: all 400ms ease-out 0s;
 		 -o-transition: all 400ms ease-out 0s;
 		    transition: all 400ms ease-out 0s;
-		  
+
 	-webkit-transform: rotateY(0deg);
 	   -moz-transform: rotateY(0deg);
 		-ms-transform: rotateY(0deg);
 		 -o-transform: rotateY(0deg);
-			transform: rotateY(0deg);	
+			transform: rotateY(0deg);
 }
 
 .icons-example ul li a span {
@@ -692,15 +696,15 @@ blockquote small:before {
 	color: #55606a;
 	font-size: 32px;
 	line-height: 70px;
-	
+
 	opacity: 0.3;
 	filter: alpha(opacity=30);
-	
-	-webkit-transition: all 400ms ease-out 0s;	
+
+	-webkit-transition: all 400ms ease-out 0s;
 	   -moz-transition: all 400ms ease-out 0s;
 		 -o-transition: all 400ms ease-out 0s;
 		    transition: all 400ms ease-out 0s;
-		  
+
 	-webkit-transform: rotateY(0deg);
 	   -moz-transform: rotateY(0deg);
 		-ms-transform: rotateY(0deg);
@@ -710,8 +714,8 @@ blockquote small:before {
 
 .icons-example ul li:hover a,
 .icons-example ul li.active a {
-	background-color: #DE5E60;	
-	
+	background-color: #2874dc;
+
 	-webkit-transform: rotateY(180deg);
 	   -moz-transform: rotateY(180deg);
 		-ms-transform: rotateY(180deg);
@@ -724,7 +728,7 @@ blockquote small:before {
 	color: #FFFFFF;
 	opacity: 1;
 	filter: alpha(opacity=100);
-	
+
 	-webkit-transform: rotateY(180deg);
 	   -moz-transform: rotateY(180deg);
 		-ms-transform: rotateY(180deg);

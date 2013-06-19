@@ -7,5 +7,4 @@ window.MadeAtHackreactor = {
     console.log('Hello from Backbone!');
   }
 };
-
 MadeAtHackreactor.initialize();
