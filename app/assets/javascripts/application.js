@@ -23,5 +23,6 @@
 //= require_tree ./theme
 //= require ./theme/sticky
 //= require ./theme/main
+//= require main
 //= require_tree .
 

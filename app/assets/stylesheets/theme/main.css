@@ -532,7 +532,8 @@ header #logo {
 }
 
 header #logo a {
-	background: url(../../assets/hackreactor_@2x.png) no-repeat;
+	/*background: url(../../assets/hackreactor_@2x.png) no-repeat;*/
+	background: url(http://hackreactor.com/wp-content/uploads/2013/04/180px.png) no-repeat;
 	width: 96px;
 	height: 30px;
 	text-indent: -9999px;

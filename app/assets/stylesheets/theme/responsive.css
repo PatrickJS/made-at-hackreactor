@@ -396,7 +396,8 @@
    only screen and (min-resolution: 2dppx) {
 
   header #logo a {
-   background-image: url(../../assets/hackreactor_@2x.png);
+   /*background-image: url(../../assets/hackreactor_@2x.png);*/
+   background-image: url(http://hackreactor.com/wp-content/uploads/2013/04/180px.png);
    background-size: 96px 30px;
   }
 

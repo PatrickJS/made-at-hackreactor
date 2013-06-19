@@ -4,6 +4,7 @@ MadeAtHackreactor.Routers.Websites = Backbone.Router.extend({
       '/websites/:id': 'all'
     },
     index: function() {
+      MadeAtHackreactor.Vent.trigger('yolo');
       console.log('yoyo');
     },
     all: function(data) {
