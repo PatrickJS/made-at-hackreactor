@@ -6,14 +6,17 @@
   Routers: {},
   Vent: _.extend({}, Backbone.Events),
   initialize: function() {
-      HackReactor.Vent.on('yolo', function() {
-        console.log('inside vent yo');
-      });
       var websitesCollection = new HackReactor.Collections.Websites();
-      websitesCollection.fetch();
-      new HackReactor.Views.WebsitesIndex({collection: websitesCollection});
+      new HackReactor.Views.Index({collection: websitesCollection});
+      websitesCollection.fetch({
+        success: function(collection, response){
+          console.log(arguments);
+            collection.trigger('sync');
+          }
+      });
       window.debug = websitesCollection;
-      console.log('Hello from Backbone!');
+
+      console.log('Hello with love from Backbone!');
       new HackReactor.Routers.Websites();
       Backbone.history.start();
     }
