@@ -8,9 +8,7 @@
   initialize: function() {
       var websitesCollection = new HackReactor.Collections.Websites();
       new HackReactor.Views.Index({collection: websitesCollection});
-      websitesCollection.fetch({ success: function(collection, response) {
-          collection.trigger('sync');
-      }});
+      websitesCollection.fetch();
       window.debug = websitesCollection;
 
       console.log('Hello with love from Backbone!');
