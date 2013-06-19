@@ -5,6 +5,7 @@ module Api
     # GET /api/websites.json
     def index
       @websites = Website.all
+      $redis.publish 'rt-change', @websites.to_json
       render json: @websites
     end
 

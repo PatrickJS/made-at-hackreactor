@@ -33,7 +33,7 @@ HackReactor.Views.Website = Backbone.View.extend({
                         '</div>'+
                       '</div>'),
   initialize: function(){
-    HackReactor.Vent.on('website', this.render, this);
+    HackReactor.Socket.on('website', this.render, this);
     this.model.on('change', this.render, this);
   },
   events: {

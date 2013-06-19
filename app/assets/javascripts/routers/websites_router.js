@@ -4,10 +4,10 @@ HackReactor.Routers.Websites = Backbone.Router.extend({
       '/websites/:id': 'all'
     },
     index: function() {
-      HackReactor.Vent.trigger('index');
+      HackReactor.Socket.trigger('index');
     },
     all: function(id) {
       console.log(id);
-      HackReactor.Vent.trigger('all', id);
+      HackReactor.Socket.trigger('all', id);
     }
 });

@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require underscore
 //= require backbone
+//= require socket.io
 //= require hackreactor
 //= require_tree ../templates
 //= require_tree ./models

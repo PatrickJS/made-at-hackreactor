@@ -13,7 +13,7 @@ HackReactor.Views.Index = Backbone.View.extend({
                           '</div>'+
                       '</div>'),
   initialize: function(){
-    HackReactor.Vent.on('index', this.render, this);
+    HackReactor.Socket.on('index', this.render, this);
     this.collection.on('sync', this.addAll, this);
   },
   render: function() {
