@@ -7,4 +7,6 @@ window.MadeAtHackreactor = {
     console.log('Hello from Backbone!');
   }
 };
-MadeAtHackreactor.initialize();
+$(function() {
+  MadeAtHackreactor.initialize();
+});

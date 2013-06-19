@@ -309,7 +309,7 @@ h3.spec {
 	display: inline-block;
 	width: 24px;
 	height: 24px;
-	background: url(../img/seperator.png) no-repeat;
+	background: url(../assets/seperator.png) no-repeat;
 	vertical-align: text-top;
 }
 
@@ -595,7 +595,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .menu-nav {
-	background:url(../img/menu-mobile.png) 0 0 no-repeat;
+	background:url(../assets/menu-mobile.png) 0 0 no-repeat;
 	width: 16px;
 	height: 16px;
 	display: block;
@@ -1547,6 +1547,7 @@ footer .credits {
 
 #jpreOverlay,
 #jSplash {
+	/*background: url(http://hackreactor.com/wp-content/themes/ViewPoint/images/intro-bg.jpg);*/
 	background-color: #2F3238;
 	position: absolute;
 	width: 100%;
@@ -1599,7 +1600,7 @@ footer .credits {
 	margin: -50px 0 0 -50px;
 	width: 100px;
 	height: 100px;
-	background: #2874dc;
+	/*background: #2874dc;*/
 	-webkit-border-radius: 999px;
 	-moz-border-radius: 999px;
 	border-radius: 999px;

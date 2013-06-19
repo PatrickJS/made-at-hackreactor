@@ -60,31 +60,20 @@ CHAKRA.menu = function(){
   });
 };
 
-/* ==================================================
-   Next Section
-================================================== */
 
-$(function(){
-  $('#nextsection').on('click', function(){
-    $target = $($(this).attr('href')).offset().top-30;
-
-    $('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
-    return false;
-  });
-});
 
 /* ==================================================
    GoUp
 ================================================== */
 
-$(function(){
+CHAKRA.goUp = function(){
   $('#goUp').on('click', function(){
     $target = $($(this).attr('href')).offset().top-30;
 
     $('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
     return false;
   });
-});
+};
 
 
 /* ==================================================
@@ -264,11 +253,10 @@ CHAKRA.map = function(){
     });
   }
 };
+
 /* ==================================================
   Init
 ================================================== */
-
-CHAKRA.slider();
 
 $(document).ready(function(){
   // Call placeholder.js to enable Placeholder Property for IE9
@@ -297,21 +285,21 @@ $(document).ready(function(){
     autoClose: true
   });
 
-  CHAKRA.nav();
+  // CHAKRA.nav();
   CHAKRA.mobileNav();
   CHAKRA.listenerMenu();
   CHAKRA.menu();
-  CHAKRA.goSection();
+  // CHAKRA.goSection();
   CHAKRA.goUp();
-  CHAKRA.filter();
-  CHAKRA.fancyBox();
-  CHAKRA.contactForm();
-  CHAKRA.tweetFeed();
-  CHAKRA.scrollToTop();
+  // CHAKRA.filter();
+  // CHAKRA.fancyBox();
+  // CHAKRA.contactForm();
+  // CHAKRA.tweetFeed();
+  // CHAKRA.scrollToTop();
   CHAKRA.utils();
   CHAKRA.accordion();
   CHAKRA.toggle();
-  CHAKRA.toolTip();
+  // CHAKRA.toolTip();
   CHAKRA.map();
 });
 
