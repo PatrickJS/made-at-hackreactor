@@ -1,5 +1,41 @@
-MadeAtHackreactor.Views.WebsitesIndex = Backbone.View.extend({
-
-  template: JST['websites/index']
-
+HackReactor.Views.WebsitesIndex = Backbone.View.extend({
+  template: _.template('<div class="row">'+
+                        '<div class="span12">'+
+                          '<div class="row">'+
+                            '<section id="projects">'+
+                              '<div class="row">'+
+                                '<div id="thumbs">'+
+                                    '<div class="item-thumbs span5 design">'+
+                                      '<img src="" style: "max-height:240px;width:100%">'+
+                                    '</div>'+
+                                    '<div class="span7">'+
+                                      '<div class="info-block">'+
+                                        '<h3 class="spec">gdi2290'+
+                                          '<small class="pull-right" style="margin-top: 15px;">'+
+                                            '<span class="color-text">Views:</span> 32465678'+
+                                          '</small>'+
+                                        '</h3>'+
+                                        '<div class="info-text">'+
+                                          '<a href="#/gdi2290" target="_blank"><span class="color-text">http://gdi2290.com/</span></a>'+
+                                          '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas neque diam, luctus at laoreet in, auctor ut tellus. Etiam enim lacus, ornare et tempor, rhoncus rhoncus sem.</p>'+
+                                          '<div class="like-tweet pull-right">'+
+                                            '<a class="button" href="#">Like</a>'+
+                                            '<a class="button" href="#">Tweet</a>'+
+                                          '</div>'+
+                                        '</div>'+
+                                      '</div>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</section>'+
+                          '</div>'+
+                        '</div>'+
+                      '</div>'),
+  initialize: function(){
+    HackReactor.Vent.on('index', this.render, this);
+    console.log('inside Website View');
+  },
+  render: function() {
+    $('#hackreactor-websites').html(this.template(this.collection.attributes));
+    return this;
+  }
 });

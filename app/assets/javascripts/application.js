@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require underscore
 //= require backbone
-//= require made_at_hackreactor
+//= require hackreactor
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections
@@ -23,6 +23,5 @@
 //= require_tree ./theme
 //= require ./theme/sticky
 //= require ./theme/main
-//= require main
 //= require_tree .
 
