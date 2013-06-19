@@ -27,8 +27,8 @@
   	*border: 0;
   	*zoom: 1;
 }
-.item-thumbs .button {
-  margin-bottom: 10px;
+.like-tweet .button {
+  margin-top: 10px;
   color: #2874dc;
 }
 /*--- Hover/Active/Focus State ---*/

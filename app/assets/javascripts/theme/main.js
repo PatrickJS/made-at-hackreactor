@@ -60,6 +60,18 @@ CHAKRA.menu = function(){
   });
 };
 
+/* ==================================================
+   Next Section
+================================================== */
+
+CHAKRA.goSection = function(){
+  $('#nextsection, #hackreactor-logo').on('click', function(){
+    $target = $($(this).attr('href')).offset().top-30;
+
+    $('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
+    return false;
+  });
+};
 
 
 /* ==================================================
@@ -68,7 +80,7 @@ CHAKRA.menu = function(){
 
 CHAKRA.goUp = function(){
   $('#goUp').on('click', function(){
-    $target = $($(this).attr('href')).offset().top-30;
+    $target = $($('#hackreactor-logo').attr('href')).offset().top-30;
 
     $('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
     return false;
@@ -289,7 +301,7 @@ $(document).ready(function(){
   CHAKRA.mobileNav();
   CHAKRA.listenerMenu();
   CHAKRA.menu();
-  // CHAKRA.goSection();
+  CHAKRA.goSection();
   CHAKRA.goUp();
   // CHAKRA.filter();
   // CHAKRA.fancyBox();
