@@ -14,10 +14,14 @@
 ActiveRecord::Schema.define(:version => 20130618182618) do
 
   create_table "websites", :force => true do |t|
+    t.string   "name"
+    t.string   "image"
     t.string   "url"
-    t.integer  "views"
-    t.text     "content"
     t.string   "team"
+    t.integer  "views"
+    t.string   "share"
+    t.string   "social"
+    t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
