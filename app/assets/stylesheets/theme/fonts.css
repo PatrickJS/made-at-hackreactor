@@ -2,7 +2,7 @@
 Font-Face Icons
 ================================================== */
 
-@font-face {
+/*@font-face {
 	font-family: 'Icons';
 	src:url('../fonts/Icons.eot');
 	src:url('../fonts/Icons.eot?#iefix') format('embedded-opentype'),
@@ -11,7 +11,7 @@ Font-Face Icons
 		url('../fonts/Icons.svg#Icons') format('svg');
 	font-weight: normal;
 	font-style: normal;
-}
+}*/
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {

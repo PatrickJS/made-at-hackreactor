@@ -4,25 +4,24 @@
   Collections: {},
   Views: {},
   Routers: {},
-  Socket: _.extend({
+  Socket: _.extend(Backbone.Events, {
     connect: function() {
-      this.io = io.connect('http://0.0.0.0:5001');
-      this.io.on('rt-change', function(message) {
-        console.log('yolo', message);
-
-        return window.HackReactor.Socket.trigger('add', message);
+      HackReactor.Socket.io = io.connect('http://0.0.0.0:5001');
+      HackReactor.Socket.io.on('rt-change', function(message) {
+        console.log('in socket connect', message);
+        HackReactor.Socket.trigger('website', message);
       });
     }
-  }, Backbone.Events),
+  }),
   initialize: function() {
-      this.Socket.connect();
       var websitesCollection = new this.Collections.Websites();
       new this.Views.Index({collection: websitesCollection});
       websitesCollection.fetch();
-
-      console.log('Hello with love from Backbone!');
       new this.Routers.Websites();
       Backbone.history.start({pushState: true});
+      this.Socket.connect();
+
+      console.log('Hello with love from Backbone!');
     }
   };
   $(function() {

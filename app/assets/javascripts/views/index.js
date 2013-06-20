@@ -15,13 +15,12 @@ HackReactor.Views.Index = Backbone.View.extend({
   initialize: function(){
     HackReactor.Socket.on('index', this.render, this);
     this.collection.on('sync', this.addAll, this);
+    this.collection.on('add', this.addAll, this);
   },
   render: function() {
     this.$el.empty();
     $('#hackreactor-index').html(this.template());
     return this;
-  },
-  addOne: function() {
   },
   addAll: function() {
     $('#hackreactor-websites').html(_(this.collection.models).map(function(websiteModel) {

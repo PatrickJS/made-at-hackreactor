@@ -33,13 +33,22 @@ HackReactor.Views.Website = Backbone.View.extend({
                         '</div>'+
                       '</div>'),
   initialize: function(){
-    HackReactor.Socket.on('website', this.render, this);
+    this.model.on('destroy', this.removeIt, this);
     this.model.on('change', this.render, this);
   },
   events: {
-    'click a.button': 'yolo'
+    'click a.button': 'vote'
   },
-  yolo: function(e) {
+  destroyIt: function() {
+    this.model.destroy();
+  },
+  removeIt: function(){
+    $(this.el).remove();
+  },
+  updateIt: function() {
+    this.model.fetch();
+  },
+  vote: function(e) {
     var button = $(e.target).attr('href');
     var yolo = Number($(button).text());
     yolo++;
