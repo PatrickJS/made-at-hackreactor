@@ -5,7 +5,6 @@ redis.subscribe('rt-change');
 
 io.on('connection', function(socket){
   redis.on('message', function(channel, message){
-    console.log('redis: channel', channel);
     console.log('redis', message);
     socket.emit('rt-change', JSON.parse(message));
   });

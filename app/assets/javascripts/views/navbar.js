@@ -18,19 +18,9 @@ HackReactor.Views.Navbar = Backbone.View.extend({
                        ' </div>'+
                       '</header>'),
   initialize: function(){
-    HackReactor.Socket.on('navbar', this.render, this);
   },
   render: function() {
-    this.$el.empty();
-    $('menu-nav').html(this.template());
     return this;
-  },
-  addOne: function() {
-  },
-  addAll: function() {
-    $('#hackreactor-websites').html(_(this.collection.models).map(function(websiteModel) {
-      return new HackReactor.Views.Website({model: websiteModel}).render().el;
-    }));
-
   }
+
 });

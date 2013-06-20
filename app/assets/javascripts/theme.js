@@ -65,6 +65,12 @@ CHAKRA.menu = function(){
 ================================================== */
 
 CHAKRA.goSection = function(){
+  // $('#work').on('click', function(){
+  //   $target = $($('#work').attr('href')).offset().top-30;
+
+  //   $('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
+  //   return false;
+  // });
   $('#nextsection, #hackreactor-logo').on('click', function(){
     $target = $($(this).attr('href')).offset().top-30;
 
@@ -92,7 +98,7 @@ CHAKRA.goUp = function(){
   Scroll to Top
 ================================================== */
 
-$(function(){
+CHAKRA.scrollToTop = function(){
   var windowWidth = $(window).width(),
     didScroll = false;
 
@@ -118,7 +124,7 @@ $(function(){
       }
     }
   }, 250);
-});
+};
 
 /* ==================================================
    Thumbs / Social Effects
@@ -185,92 +191,10 @@ CHAKRA.toolTip = function(){
 };
 
 /* ==================================================
-   Map
-================================================== */
-
-CHAKRA.map = function(){
-  if($('.map').length > 0)
-  {
-
-    $('.map').each(function(i,e){
-
-      $map = $(e);
-      $map_id = $map.attr('id');
-      $map_lat = $map.attr('data-mapLat');
-      $map_lon = $map.attr('data-mapLon');
-      $map_zoom = parseInt($map.attr('data-mapZoom'));
-      $map_title = $map.attr('data-mapTitle');
-
-
-
-      var latlng = new google.maps.LatLng($map_lat, $map_lon);
-      var options = {
-        scrollwheel: false,
-        draggable: false,
-        zoomControl: false,
-        disableDoubleClickZoom: false,
-        disableDefaultUI: true,
-        zoom: $map_zoom,
-        center: latlng,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-
-      var styles = [
-              {
-                stylers: [
-                { hue: "#2F3238" },
-                { saturation: -20 }
-                ]
-              }, {
-                featureType: "road",
-                elementType: "geometry",
-                stylers: [
-                  { lightness: 100 },
-                  { visibility: "simplified" }
-                ]
-              }, {
-                featureType: "road",
-                elementType: "labels",
-                stylers: [
-                  { visibility: "off" }
-                ]
-              }
-            ];
-
-      var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
-
-      var map = new google.maps.Map(document.getElementById($map_id), options);
-
-      var image = 'assets/marker.png';
-      var marker = new google.maps.Marker({
-        position: latlng,
-        map: map,
-        title: $map_title,
-        icon: image
-      });
-
-      map.mapTypes.set('map_style', styledMap);
-        map.setMapTypeId('map_style');
-
-      var contentString = '<p><strong>Company Name</strong><br>Address here</p>';
-
-      var infowindow = new google.maps.InfoWindow({
-        content: contentString
-      });
-
-      google.maps.event.addListener(marker, 'click', function() {
-            infowindow.open(map,marker);
-        });
-
-    });
-  }
-};
-
-/* ==================================================
   Init
 ================================================== */
 
-$(document).ready(function(){
+$(function(){
   // Call placeholder.js to enable Placeholder Property for IE9
   Modernizr.load([
   {
@@ -296,7 +220,6 @@ $(document).ready(function(){
     showPercentage: true,
     autoClose: true
   });
-
   // CHAKRA.nav();
   CHAKRA.mobileNav();
   CHAKRA.listenerMenu();
@@ -307,12 +230,13 @@ $(document).ready(function(){
   // CHAKRA.fancyBox();
   // CHAKRA.contactForm();
   // CHAKRA.tweetFeed();
-  // CHAKRA.scrollToTop();
+  CHAKRA.scrollToTop();
   CHAKRA.utils();
   CHAKRA.accordion();
   CHAKRA.toggle();
   // CHAKRA.toolTip();
-  CHAKRA.map();
+  $target = $('#hackreactor-index').offset().top-30;
+  $('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
 });
 
 $(window).resize(function(){
