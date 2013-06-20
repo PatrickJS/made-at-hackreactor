@@ -5,6 +5,7 @@ gem 'rails', '3.2.13'
 gem 'jquery-rails'
 gem 'thin'
 gem 'redis'
+gem "resque"
 # gem 'unicorn'
 
 gem 'bootstrap-sass'
