@@ -3,10 +3,10 @@ ruby '2.0.0'
 
 gem 'rails', '3.2.13'
 gem 'jquery-rails'
-gem 'thin'
+# gem 'thin'
 gem 'redis'
 # gem "resque" # future use
-# gem 'unicorn' #an option
+gem 'unicorn' #an option
 # gem 'puma' # also an option with rails 4.0 and live controller
 # gem 'rails-observers' # for rails 4.0
 
