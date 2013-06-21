@@ -1253,7 +1253,7 @@ nav#menu #menu-nav li a:hover {
    Contact Section
 ================================================== */
 
-.contact-details h3 {
+.website-details h3 {
 	color: #FFFFFF;
     font-size: 24px;
     font-weight: 300;
@@ -1262,28 +1262,28 @@ nav#menu #menu-nav li a:hover {
     text-transform: uppercase;
 }
 
-.contact-details ul {
+.website-details ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
-.contact-details ul li {
+.website-details ul li {
 	margin: 0 0 20px;
 	line-height: 28px;
 	padding: 0;
 }
 
-#contact-form {
+#website-form {
 	margin-bottom: 0;
 }
 
-#contact-form p {
+#website-form p {
 	margin-bottom: 1px;
 }
 
-#contact-form input,
-#contact-form textarea {
+#website-form input,
+#website-form textarea {
     border: none;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
@@ -1303,14 +1303,14 @@ nav#menu #menu-nav li a:hover {
     resize: none;
 }
 
-#contact-form input {
+#website-form input {
     width: 100%;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-#contact-form textarea {
+#website-form textarea {
     width: 100%;
 	resize: vertical;
 	-webkit-box-sizing: border-box;
@@ -1318,7 +1318,7 @@ nav#menu #menu-nav li a:hover {
 	box-sizing: border-box;
 }
 
-#contact-form .submit {
+#website-form .submit {
     background: #3C3F45;
     color: #23262C;
     cursor: pointer;
@@ -1337,7 +1337,7 @@ nav#menu #menu-nav li a:hover {
 		    transition: background 0.1s linear 0s, color 0.1s linear 0s;
 }
 
-#contact-form .submit:hover {
+#website-form .submit:hover {
     background: #2874dc;
     color: #FFFFFF;
 }

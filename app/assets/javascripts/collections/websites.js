@@ -6,7 +6,6 @@ HackReactor.Collections.Websites = Backbone.Collection.extend({
     HackReactor.Socket.on('website', this.handle_change, this);
   },
   handle_change : function(message){
-    console.log('in handle');
     var model;
 
     switch(message.action){

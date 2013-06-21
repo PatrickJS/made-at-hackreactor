@@ -1,4 +1,5 @@
 HackReactor.Views.Index = Backbone.View.extend({
+  el: $('#hackreactor-index'),
   template: _.template('<div id="work" class="page">'+
                         '<div class="container">'+
                               '<div class="row">'+
@@ -13,16 +14,23 @@ HackReactor.Views.Index = Backbone.View.extend({
                           '</div>'+
                       '</div>'),
   initialize: function(){
-    HackReactor.Socket.on('index', this.render, this);
+    // HackReactor.Socket.on('index', this.render, this);
     this.collection.on('sync', this.addAll, this);
-    this.collection.on('add', this.addAll, this);
+    this.collection.on('add', this.addOne, this);
+    this.collection.on('remove', this.addAll, this);
   },
   render: function() {
     this.$el.empty();
     $('#hackreactor-index').html(this.template());
     return this;
   },
+  addOne: function(site) {
+    console.log('add one', site);
+    var website =  new HackReactor.Views.Website({model: site});
+    $('#hackreactor-websites').append(website.render().el);
+  },
   addAll: function() {
+    console.log('add all');
     $('#hackreactor-websites').html(_(this.collection.models).map(function(websiteModel) {
       return new HackReactor.Views.Website({model: websiteModel}).render().el;
     }));

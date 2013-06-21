@@ -33,8 +33,8 @@ HackReactor.Views.Website = Backbone.View.extend({
                         '</div>'+
                       '</div>'),
   initialize: function(){
-    this.model.on('destroy', this.removeIt, this);
     this.model.on('change', this.render, this);
+    this.model.on('destroy', this.removeIt, this);
   },
   events: {
     'click a.button': 'vote'
@@ -43,7 +43,7 @@ HackReactor.Views.Website = Backbone.View.extend({
     this.model.destroy();
   },
   removeIt: function(){
-    $(this.el).remove();
+    this.$el.remove();
   },
   updateIt: function() {
     this.model.fetch();
@@ -57,6 +57,7 @@ HackReactor.Views.Website = Backbone.View.extend({
   },
   render: function() {
     this.$el.empty();
+    console.log(this.model.attributes);
     this.$el.html(this.template(this.model.attributes));
     return this;
   }

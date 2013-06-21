@@ -4,11 +4,10 @@
   Collections: {},
   Views: {},
   Routers: {},
-  Socket: _.extend(Backbone.Events, {
+  Socket: _.extend({}, Backbone.Events, {
     connect: function() {
       HackReactor.Socket.io = io.connect('http://0.0.0.0:5001');
       HackReactor.Socket.io.on('rt-change', function(message) {
-        console.log('in socket connect', message);
         HackReactor.Socket.trigger('website', message);
       });
     }
@@ -21,7 +20,7 @@
       Backbone.history.start({pushState: true});
       this.Socket.connect();
 
-      console.log('Hello with love from Backbone!');
+      console.log('Hello with love from Hack Reactor!');
     }
   };
   $(function() {

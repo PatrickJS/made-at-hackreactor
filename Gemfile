@@ -5,8 +5,10 @@ gem 'rails', '3.2.13'
 gem 'jquery-rails'
 gem 'thin'
 gem 'redis'
-gem "resque"
-# gem 'unicorn'
+# gem "resque" # future use
+# gem 'unicorn' #an option
+# gem 'puma' # also an option with rails 4.0 and live controller
+# gem 'rails-observers' # for rails 4.0
 
 gem 'bootstrap-sass'
 gem 'backbone-on-rails'
@@ -20,7 +22,6 @@ end
 
 group :production do
   gem 'pg'
-  gem 'rack-google_analytics', :require => 'rack/google_analytics'
   gem 'newrelic_rpm'
 end
 

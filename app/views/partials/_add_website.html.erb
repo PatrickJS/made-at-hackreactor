@@ -17,47 +17,69 @@
     </div>
     <!-- End Title Page -->
 
-    <!-- Contact Form -->
+    <!-- Website Form -->
     <div class="row">
       <div class="span9">
-          <form id="contact-form" class="contact-form" action="/api/messages" method="post">
-              <p class="contact-name">
-                <input id="contact_name" type="text" placeholder="Website" value="" name="url" />
+        <%= form_tag('/api/websites', remote: true, id: 'website-form') do %>
+          <!-- <form id="website-form" class="website-form" action="/api/websites" method="post"> -->
+            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                <p>
+                <input id="website_name"
+                       type="text"
+                       placeholder="Website Name"
+                       value=""
+                       name="name" />
                 </p>
-                <p class="contact-email">
-                  <input id="contact_email" type="text" placeholder="Team Members" value="" name="team" />
+                <p>
+                <input id="website_url"
+                       type="text"
+                       placeholder="Website Url"
+                       value=""
+                       name="url" />
                 </p>
-                <p class="contact-message">
-                  <textarea id="contact_message" placeholder="Description" name="content" rows="15" cols="40"></textarea>
+                <p>
+                <input id="website_image_url"
+                       type="text"
+                       placeholder="Website Image Url"
+                       value=""
+                       name="image" />
                 </p>
-                <p class="contact-submit">
-                  <input type="submit" id="contact-submit" class="submit" value="Submit">
+                <p>
+                <input id="website_team"
+                       type="text"
+                       placeholder="Team Members"
+                       value=""
+                       name="team" />
+                </p>
+                <p>
+                <input id="website_social"
+                       type="text"
+                       placeholder="Website Social Networks"
+                       value=""
+                       name="social" />
+                </p>
+                <p>
+                  <textarea id="website_message"
+                            placeholder="Description"
+                            name="content"
+                            rows="15"
+                            cols="40">
+                  </textarea>
+                </p>
+                <p>
+                  <input type="submit"
+                         id="website-submit"
+                         class="submit"
+                         value="Submit">
                 </p>
 
                 <div id="response">
 
                 </div>
-            </form>
-
-        </div>
-
-        <div class="span3">
-          <div class="contact-details">
-            <h3>Contact Details</h3>
-                <ul>
-                    <li><a href="#">hello@hackreactor.com</a></li>
-                    <li>(555) 555.5555</li>
-                    <li>
-                        Hack Reactor
-                        <br>
-                        Market Street
-                        <br>
-                        San Francisco
-                    </li>
-                </ul>
-            </div>
+            <!-- </form> -->
+            <% end %>
         </div>
     </div>
-    <!-- End Services Form -->
+    <!-- End Website Form -->
 </div>
 </div>

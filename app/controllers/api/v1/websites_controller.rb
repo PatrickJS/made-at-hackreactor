@@ -7,7 +7,6 @@ module Api
       def index
         @websites = Website.all
 
-        # $redis.publish 'rt-change', @websites.to_json
         render json: @websites
       end
 
@@ -31,6 +30,7 @@ module Api
 
       # POST /api/websites.json
       def create
+        #redis
         @website = Website.new(params[:website])
 
         if @website.save
@@ -42,6 +42,8 @@ module Api
 
       # PUT /api/websites/1.json
       def update
+        #redis
+
         @website = Website.find(params[:id])
 
         if @website.update_attributes(params[:website])
