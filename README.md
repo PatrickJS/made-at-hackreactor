@@ -1,12 +1,10 @@
 # Made at Hack Reactor
 
 bundle install  
-rake dn:migrate  
-rails server  
-redis-server  
-node node/server.js  
-
-localhost:3000  
+gem install foreman  
+rake db:migrate  
+foreman server -f Procfile.dev  
+localhost:5100  
 
 website RESTful API  
 /api/websites/:id  
