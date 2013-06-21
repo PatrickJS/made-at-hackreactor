@@ -4,5 +4,7 @@
   "version" : "0.0.1",
   "dependencies" : {
     "socket.io" : "0.9.16",
-    "redis": "0.7.3"  }
+    "redis": "0.7.3",
+    "webshot":"0.5.0"
+  }
 }
