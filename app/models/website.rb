@@ -22,11 +22,14 @@ class Website < ActiveRecord::Base
     # $redis
   end
   def message(action)
-
+    token = "#{self.id*8}#{self.name.length*8}_#{self.name}"
+    # token = Rack::Utils.escape("#{self.id*8}#{self.name.length*8}_#{self.name}")
     msg = { resource: 'websites',
             action: action,
             id: self.id,
-            website: self }
+            website: self ,
+            encoded_token: token
+          }
     $redis.publish 'rt-change', msg.to_json
   end
 end
