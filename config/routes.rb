@@ -3,9 +3,15 @@ MadeAtHackreactor::Application.routes.draw do
 
   namespace :api do
     scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
-      resources :websites
+      resources :websites do
+      end
     end
   end
+
+  get '/banner' => 'api/v1/websites#banner'
+  get '/callback' => 'api/v1/websites#callback'
+  get '/session' => 'main#show_session'
+  # get '/reset_session' => 'main#reset_session'
 
 
   root to: 'main#index'

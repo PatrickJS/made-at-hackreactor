@@ -3,6 +3,16 @@ module Api
     class WebsitesController < ApplicationController
       respond_to :json
 
+      def banner
+        @websites = Website.all
+        render file: "banner.gif.erb", content_type: 'application/json'
+      end
+      def callback
+        puts params.inspect
+        @websites = Website.all
+        render file: "callback.json.erb", content_type: 'application/json'
+      end
+
       # GET /api/websites.json
       def index
         @websites = Website.all

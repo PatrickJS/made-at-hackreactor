@@ -3,15 +3,18 @@ ruby '2.0.0'
 
 gem 'rails', '3.2.13'
 gem 'jquery-rails'
+gem 'unicorn' #an option
 # gem 'thin'
+# gem 'puma' # also an option with rails 4.0 and live controller
 gem 'redis'
 # gem "resque" # future use
-gem 'unicorn' #an option
-# gem 'puma' # also an option with rails 4.0 and live controller
 # gem 'rails-observers' # for rails 4.0
+gem "github_api"
+gem 'json'
 
 gem 'bootstrap-sass'
 gem 'backbone-on-rails'
+gem 'icomoon-rails'
 
 group :development do
   gem 'sqlite3'

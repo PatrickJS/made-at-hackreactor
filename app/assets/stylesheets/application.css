@@ -17,4 +17,5 @@
  *= require ./theme/shortcodes
  *= require ./theme/responsive
  *= require_tree .
+ *= require icomoon-free/style
  */

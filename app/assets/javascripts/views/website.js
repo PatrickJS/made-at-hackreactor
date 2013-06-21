@@ -21,8 +21,9 @@ HackReactor.Views.Website = Backbone.View.extend({
                                           '<a href="<%= url %>" target="_blank"><span class="color-text"><%= url %></span></a>'+
                                           '<p><%= content %></p>'+
                                           '<div class="like-tweet">'+
-                                            '<a class="button" href="#Like">Like</a>'+
-                                            '<a class="button" href="#Tweet">Tweet</a>'+
+                                            '<a class="button" href="#Like"><i class="icon-thumbs-up"></i></a>'+
+                                            '<a class="button" href="#Tweet"><i class="icon-twitter"></i></a>'+
+                                            '<a class="button" href="#Tweet"><i class="icon-github-2"></i></a>'+
                                           '</div>'+
                                         '</div>'+
                                       '</div>'+
