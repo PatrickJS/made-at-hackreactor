@@ -8,7 +8,6 @@ module Api
         render file: "banner.gif.erb", content_type: 'application/json'
       end
       def callback
-        puts params.inspect
         @websites = Website.all
         render file: "callback.json.erb", content_type: 'application/json'
       end
