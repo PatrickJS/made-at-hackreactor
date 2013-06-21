@@ -40,9 +40,16 @@ HackReactor.Views.Website = Backbone.View.extend({
   initialize: function(){
     this.model.on('change', this.render, this);
     this.model.on('destroy', this.removeIt, this);
+    HackReactor.Socket.on('update_image', this.checkImage, this);
   },
   events: {
     'click a.button': 'vote'
+  },
+  checkImage:  function(message) {
+    console.log('================-checkDatImage-================');
+    console.log(this.$el.find('img').attr('src'));
+    this.render();
+    console.log(this.$el.find('img').attr('src'));
   },
   destroyIt: function() {
     this.model.destroy();
