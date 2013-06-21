@@ -4,11 +4,17 @@ module Api
       respond_to :json
 
       def banner
-        Website.where(name: params[:company_name]).first_or_create({
+        puts '========-params-========='
+        puts params
+
+        @website = Website.where(name: params[:company_name]).first_or_create({
             url: params[:url],
             content: params[:description],
             team: params[:team]
           })
+        puts @website
+        puts '========-end_params-========='
+
         redirect_to 'http://hackreactor.herokuapp.com/assets/hackrrBanner.png'
       end
       def callback

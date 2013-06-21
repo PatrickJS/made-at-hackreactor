@@ -25,12 +25,10 @@ HackReactor.Views.Index = Backbone.View.extend({
     return this;
   },
   addOne: function(site) {
-    console.log('add one', site);
     var website =  new HackReactor.Views.Website({model: site});
-    $('#hackreactor-websites').append(website.render().el);
+    $('#hackreactor-websites').prepend(website.render().el);
   },
   addAll: function() {
-    console.log('add all');
     $('#hackreactor-websites').html(_(this.collection.models).map(function(websiteModel) {
       return new HackReactor.Views.Website({model: websiteModel}).render().el;
     }));

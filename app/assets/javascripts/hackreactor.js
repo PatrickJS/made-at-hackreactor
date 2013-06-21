@@ -9,11 +9,11 @@
       HackReactor.Socket.io = io.connect('http://0.0.0.0:5001');
       HackReactor.Socket.io.on('rt-change', function(message) {
         console.log('================-RT-Change!-================');
-        HackReactor.Socket.trigger('website', message);
-      });
-      HackReactor.Socket.io.on('update_image', function(message) {
-        console.log('================-listenToimage-================');
-        HackReactor.Socket.trigger('update_image', message);
+        HackReactor.Socket.trigger('website:change', message);
+        HackReactor.Socket.io.on('update_image_'+message.id, function(message) {
+          console.log('================-listenToimage-================');
+          HackReactor.Socket.trigger('update_image_'+message.id, message);
+        });
       });
     }
   }),

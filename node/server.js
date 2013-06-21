@@ -12,7 +12,6 @@ io.on('connection', function(socket){
   redis.on('message', function(channel, message){
     message = JSON.parse(message);
     message.website.image = './assets/'+message.encoded_token+'.png';
-    socket.emit('rt-change', message);
 
     if (message.action === 'create') {
       options = {
@@ -34,7 +33,8 @@ io.on('connection', function(socket){
         if (err) return console.log(err);
         console.log('OK!');
         console.log(message.encoded_token+'.png');
-        socket.emit('update_image', message);
+        socket.emit('rt-change', message);
+        socket.emit('update_image_'+message.id, message);
         // screenshot now saved to google.png
       });
     }

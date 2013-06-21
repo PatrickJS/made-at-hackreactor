@@ -3,11 +3,11 @@ HackReactor.Collections.Websites = Backbone.Collection.extend({
   model: HackReactor.Models.Website,
 
   initialize: function(){
-    HackReactor.Socket.on('website', this.handle_change, this);
+    HackReactor.Socket.on('website:change', this.handle_change, this);
   },
   handle_change : function(message){
     var model;
-
+    message.image = "(Number(this.id)*8)+''+this.name.length*8+this.name";
     switch(message.action){
       case 'create':
         this.add(message.website);
