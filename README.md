@@ -11,6 +11,8 @@ website RESTful API
 $ curl -H 'Accept:application/vnd.hackreactor.v1' http://localhost:3000/api/websites
 
 Work in Progress scripttag.js
+
+version 1
 <pre>
 (function() {
   var HackReactor = {};
@@ -32,7 +34,36 @@ Work in Progress scripttag.js
   console.log('Hello with love from Hack Reactor');
 }());
 </pre>
+version 2
+<pre>
+var builtAtHackReactor = function(options) {
+  var img = new Image();
+  img.style.position = 'absolute';
+  img.style[options.position[1]] = 0;
+  img.style[options.position[0]] = 0;
+  console.log(img);
+  var query = '?';
+  for (var key in options) {
+    if (typeof options[key] === 'string') {
+      query +=  '&'+ key + '=' + options[key];
+    }
+  }
+  var url = options.overWriteUrl || "https://hackreactor.herokuapp.com/";
+  console.log(query);
+  img.src = url+options.name+".png"+query+'';
+  document.getElementsByTagName('body')[0].appendChild(img);
+}
 
+builtAtHackReactor({
+  position: ["top","right"],
+  name: 'gdi2290',
+  overWriteUrl: 'http://localhost:5100/banner/',
+  description: 'an awesome website.',
+  twitter: 'gdi2290',
+  github: 'gdi2290',
+  facebook: 'gdi2290'
+});
+</pre>
 
 
 
