@@ -8,7 +8,7 @@ MadeAtHackreactor::Application.routes.draw do
     end
   end
 
-  get '/banner' => 'api/v1/websites#banner'
+  get '/banner/:company_name.png' => 'api/v1/websites#banner', format: false
   get '/callback' => 'api/v1/websites#callback'
   get '/session' => 'main#show_session'
   # get '/reset_session' => 'main#reset_session'
