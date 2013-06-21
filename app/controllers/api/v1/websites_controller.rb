@@ -4,8 +4,12 @@ module Api
       respond_to :json
 
       def banner
-        @websites = Website.all
-        render file: "banner.gif.erb", content_type: 'application/json'
+        Website.where(name: params[:company_name]).first_or_create({
+            url: params[:url],
+            content: params[:description],
+            team: params[:team]
+          })
+        redirect_to 'http://hackreactor.herokuapp.com/assets/hackrrBanner.png'
       end
       def callback
         @websites = Website.all
