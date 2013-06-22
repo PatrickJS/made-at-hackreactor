@@ -3,17 +3,7 @@ var io = require('socket.io').listen(5001),
     fs = require('fs'),
     http = require("http"),
     url = require("url"),
-    webshot = require('webshot'),
-    im = require('imagemagick');
-
-// im.resize({
-//   srcPath: __dirname + '/koala.jpg',
-//   dstPath: __dirname + '/koala-small.jpg',
-//   width:   '50%'
-// }, function(err, stdout, stderr){
-//   if (err) throw err
-//   console.log('resized');
-// });
+    webshot = require('webshot');
 
 redis.subscribe('rt-change');
 
@@ -35,7 +25,7 @@ io.on('connection', function(socket){
         },
         userAgent: 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_2 like Mac OS X; en-us)'+
           ' AppleWebKit/531.21.20 (KHTML, like Gecko) Mobile/7B298g',
-        renderDelay: 20
+        renderDelay: 0
       };
 
       socket.emit('rt-change', message);

@@ -6,7 +6,7 @@
   Routers: {},
   Socket: _.extend({}, Backbone.Events, {
     connect: function() {
-      HackReactor.Socket.io = io.connect('http://0.0.0.0:5001');
+      HackReactor.Socket.io = io.connect('http://10.0.1.66:5001');
       HackReactor.Socket.io.on('rt-change', function(message) {
         console.log('================-RT-Change!-================');
         HackReactor.Socket.trigger('website:change', message);

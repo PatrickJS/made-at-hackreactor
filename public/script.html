@@ -1,0 +1,55 @@
+<html lang=en>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+<pre>
+var builtAtHackReactor = function(options) {
+  var windowDomain = window.location.host.split('.'),
+      titleDomain = document.querySelector('title').text,
+      wwwDomain = windowDomain[0] === 'www' ? windowDomain[1] : windowDomain[0],
+      name = titleDomain.length < wwwDomain.length ? titleDomain : wwwDomain,
+      meta = document.querySelectorAll('meta'),
+      url = options.overWriteUrl || "https://hackreactor.herokuapp.com/banner";
+  if (!options.description) {
+    for (var i = 0; i < meta.length; i++) {
+      if (meta[i].getAttribute('name') === 'description' || meta[i].getAttribute('property') === "og:description") {
+        options.description =  meta[i].getAttribute('content');
+        break;
+      }
+    }
+  }
+  options.url = options.fullUrl ? location.href : options.url || window.location.origin;
+  options.url = options.url.split('?')[0];
+  options.name = options.name || name;
+  options.github = options.twitter || name;
+  options.twitter = options.twitter || name;
+  options.facebook = options.twitter || name;
+  options.position = options.position || ["top", "right"];
+
+  var img = new Image();
+  img.style.position = 'absolute';
+  img.style[options.position[1]] = 0;
+  img.style[options.position[0]] = 0;
+  img.style['z-index'] = 99999;
+  var query = '?';
+  for (var key in options) {
+    if (typeof options[key] === 'string') {
+      query +=  '&'+ key + '=' + options[key];
+    }
+  }
+  img.src = url+options.name+".png"+query+'';
+  document.getElementsByTagName('body')[0].appendChild(img);
+};
+
+builtAtHackReactor({
+  overWriteUrl: 'http://localhost:5100/banner/',
+  fullUrl:true
+});
+</pre>
+</body>
+</html>

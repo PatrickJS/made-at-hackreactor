@@ -18,7 +18,7 @@ module Api
         puts '========-end_serving_banner-========='
         @websites.update_attributes(views: @websites.views+1)
 
-        redirect_to 'http://hackreactor.herokuapp.com/assets/hackrrBanner.png'
+        redirect_to 'https://hackreactor.herokuapp.com/assets/hackrrBanner.png'
       end
       def callback
         @websites = Website.all
