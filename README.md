@@ -37,13 +37,27 @@ version 1
 version 2
 <pre>
 var builtAtHackReactor = function(options) {
-  var name = window.location.host.split('.')[0] === 'www' ? window.location.host.split('.')[1] : window.location.host.split('.')[0]
-  options.position = options.position || ["top", "right"];
-  options.url = options.url || window.location.host;
+  var windowDomain = window.location.host.split('.'),
+      titleDomain = document.querySelector('title').text,
+      wwwDomain = windowDomain[0] === 'www' ? windowDomain[1] : windowDomain[0],
+      name = titleDomain.length < wwwDomain.length ? titleDomain : wwwDomain,
+      meta = document.querySelectorAll('meta'),
+      url = options.overWriteUrl || "https://hackreactor.herokuapp.com/banner";
+  if (!options.description) {
+    for (var i = 0; i < meta.length; i++) {
+      if (meta[i].getAttribute('name') === 'description' || meta[i].getAttribute('property') === "og:description") {
+        options.description =  meta[i].getAttribute('content');
+        break;
+      }
+    }
+  }
+  options.url = options.fullUrl ? location.href : options.url || window.location.origin;
   options.name = options.name || name;
-  options.twitter = options.twitter || name;
   options.github = options.twitter || name;
+  options.twitter = options.twitter || name;
   options.facebook = options.twitter || name;
+  options.position = options.position || ["top", "right"];
+
   var img = new Image();
   img.style.position = 'absolute';
   img.style[options.position[1]] = 0;
@@ -55,15 +69,13 @@ var builtAtHackReactor = function(options) {
       query +=  '&'+ key + '=' + options[key];
     }
   }
-  var url = options.overWriteUrl || "https://hackreactor.herokuapp.com/banner";
   img.src = url+options.name+".png"+query+'';
   document.getElementsByTagName('body')[0].appendChild(img);
-}
+};
 
 builtAtHackReactor({
-  position: ["top","right"],
   overWriteUrl: 'http://localhost:5100/banner/',
-  description: 'an awesome website',
+  fullUrl:true
 });
 </pre>
 

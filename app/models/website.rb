@@ -9,6 +9,7 @@ class Website < ActiveRecord::Base
   after_update {|website| website.message 'update' }
 
   def update_redis
+    self.views ||= 0
     # self.image ||= "#{self.id*8}#{self.name.length*8}_#{self.name}"
     # $redis.set 'key', 'value'
     puts '================================='
