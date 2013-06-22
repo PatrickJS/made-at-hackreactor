@@ -15,3 +15,4 @@
 /tmp
 /node/node_modules
 dump.rdb
+/public/assets/
