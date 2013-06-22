@@ -26,7 +26,7 @@ module Api
         if params[:banner] == true
           redirect_to 'https://hackreactor.herokuapp.com/assets/hackrrBanner.png'
         else
-          redirect_to 'https://hackreactor.herokuapp.com/assets/noBanner.png'
+          redirect_to 'https://hackreactor.herokuapp.com/assets/noBanner.gif'
         end
       end
       def callback

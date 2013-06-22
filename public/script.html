@@ -15,7 +15,7 @@ var builtAtHackReactor = function(options) {
       wwwDomain = windowDomain[0] === 'www' ? windowDomain[1] : windowDomain[0],
       name = titleDomain.length < wwwDomain.length ? titleDomain : wwwDomain,
       meta = document.querySelectorAll('meta'),
-      url = options.overWriteUrl || "https://hackreactor.herokuapp.com/banner";
+      url = options.overWriteUrl || "https://hackreactor.herokuapp.com/banner/";
   if (!options.description) {
     for (var i = 0; i < meta.length; i++) {
       if (meta[i].getAttribute('name') === 'description' || meta[i].getAttribute('property') === "og:description") {
