@@ -7,7 +7,6 @@ HackReactor.Collections.Websites = Backbone.Collection.extend({
   },
   handle_change : function(message){
     var model;
-    message.image = "(Number(this.id)*8)+''+this.name.length*8+this.name";
     switch(message.action){
       case 'create':
         this.add(message.website);

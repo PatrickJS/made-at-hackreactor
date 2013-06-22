@@ -28,12 +28,12 @@ io.on('connection', function(socket){
         renderDelay: 20
       };
 
-      console.log('inside node server', message);
-      webshot(message.website.url, './public/assets/'+message.encoded_token+'.png', options, function(err) {
+      socket.emit('rt-change', message);
+      console.log('=============-inside-node-server-=============', message);
+      webshot(message.website.url, './public/assets/'+message.encoded_token.toLowerCase()+'.png', options, function(err) {
         if (err) return console.log(err);
-        console.log('OK!');
+        console.log('=========-OK!-=========');
         console.log(message.encoded_token+'.png');
-        socket.emit('rt-change', message);
         socket.emit('update_image_'+message.id, message);
         // screenshot now saved to google.png
       });

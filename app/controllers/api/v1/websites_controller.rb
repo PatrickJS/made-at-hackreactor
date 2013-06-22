@@ -4,16 +4,13 @@ module Api
       respond_to :json
 
       def banner
-        puts '========-params-========='
-        puts params
-
-        @website = Website.where(name: params[:company_name]).first_or_create({
+        puts '========-serve_banner-========='
+        Website.where(name: params[:company_name]).first_or_create({
             url: params[:url],
             content: params[:description],
             team: params[:team]
           })
-        puts @website
-        puts '========-end_params-========='
+        puts '========-end_serving_banner-========='
 
         redirect_to 'http://hackreactor.herokuapp.com/assets/hackrrBanner.png'
       end

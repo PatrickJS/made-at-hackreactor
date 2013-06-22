@@ -37,31 +37,33 @@ version 1
 version 2
 <pre>
 var builtAtHackReactor = function(options) {
+  var name = window.location.host.split('.')[0] === 'www' ? window.location.host.split('.')[1] : window.location.host.split('.')[0]
+  options.position = options.position || ["top", "right"];
+  options.url = options.url || window.location.host;
+  options.name = options.name || name;
+  options.twitter = options.twitter || name;
+  options.github = options.twitter || name;
+  options.facebook = options.twitter || name;
   var img = new Image();
   img.style.position = 'absolute';
   img.style[options.position[1]] = 0;
   img.style[options.position[0]] = 0;
-  console.log(img);
+  img.style['z-index'] = 99999;
   var query = '?';
   for (var key in options) {
     if (typeof options[key] === 'string') {
       query +=  '&'+ key + '=' + options[key];
     }
   }
-  var url = options.overWriteUrl || "https://hackreactor.herokuapp.com/";
-  console.log(query);
+  var url = options.overWriteUrl || "https://hackreactor.herokuapp.com/banner";
   img.src = url+options.name+".png"+query+'';
   document.getElementsByTagName('body')[0].appendChild(img);
 }
 
 builtAtHackReactor({
   position: ["top","right"],
-  name: 'gdi2290',
   overWriteUrl: 'http://localhost:5100/banner/',
-  description: 'an awesome website.',
-  twitter: 'gdi2290',
-  github: 'gdi2290',
-  facebook: 'gdi2290'
+  description: 'an awesome website',
 });
 </pre>
 

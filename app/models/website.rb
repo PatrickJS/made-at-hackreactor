@@ -3,16 +3,13 @@ class Website < ActiveRecord::Base
   serialize :team
   serialize :share
   serialize :social
-  # before_validation :add_image
   after_create {|website| website.message 'create' }
   after_destroy {|website| website.message 'destroy' }
   before_save :update_redis
   after_update {|website| website.message 'update' }
 
-  # def add_image
-    # self.image = self.image || "#{self.id*8}#{self.name.length*8}_#{self.name}"
-  # end
   def update_redis
+    # self.image ||= "#{self.id*8}#{self.name.length*8}_#{self.name}"
     # $redis.set 'key', 'value'
     puts '================================='
     puts '==-Changed?-=='
@@ -25,7 +22,9 @@ class Website < ActiveRecord::Base
     # $redis
   end
   def message(action)
+    puts "=======-#{action}-message-======="
     token = "#{self.id*8}#{self.name.length*8}_#{self.name}"
+    self.image = './assets/'+token+'.png';
     # token = Rack::Utils.escape("#{self.id*8}#{self.name.length*8}_#{self.name}")
     msg = { resource: 'websites',
             action: action,

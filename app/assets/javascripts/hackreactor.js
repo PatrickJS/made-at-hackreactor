@@ -10,9 +10,9 @@
       HackReactor.Socket.io.on('rt-change', function(message) {
         console.log('================-RT-Change!-================');
         HackReactor.Socket.trigger('website:change', message);
-        HackReactor.Socket.io.on('update_image_'+message.id, function(message) {
+        HackReactor.Socket.io.on('update_image_'+message.id, function(data) {
           console.log('================-listenToimage-================');
-          HackReactor.Socket.trigger('update_image_'+message.id, message);
+          HackReactor.Socket.trigger('update_image_'+data.id, data);
         });
       });
     }

@@ -6,7 +6,7 @@ HackReactor.Views.Website = Backbone.View.extend({
                               '<div class="row">'+
                                 '<div id="thumbs">'+
                                     '<div class="item-thumbs span5 design">'+
-                                      '<img src="<%= image %>" style: "max-height:240px;max-width:100%;width:100% !important">'+
+                                      '<img src="./assets/<%= id * 8 %><%= name.length * 8 %>_<%= name.toLowerCase() %>.png" style: "max-height:240px;max-width:100%;width:100% !important">'+
                                     '</div>'+
                                     '<div class="span7">'+
                                       '<div class="info-block">'+
@@ -38,10 +38,10 @@ HackReactor.Views.Website = Backbone.View.extend({
                         '</div>'+
                       '</div>'),
   initialize: function(){
-    var modelID = 'update_image_'+this.model.attributes.id+'';
+    var update_image_ID = 'update_image_'+this.model.attributes.id+'';
     this.model.on('change', this.render, this);
     this.model.on('destroy', this.removeIt, this);
-    HackReactor.Socket.on(modelID, this.reloadImage, this);
+    HackReactor.Socket.on(update_image_ID, this.reloadImage, this);
   },
   events: {
     'click a.button': 'vote'
