@@ -6,7 +6,7 @@ HackReactor.Views.Website = Backbone.View.extend({
                               '<div class="row">'+
                                 '<div id="thumbs">'+
                                     '<div class="item-thumbs span5 design">'+
-                                      '<img src="./assets/<%= id * 8 %><%= name.length * 8 %>_<%= name.toLowerCase() %>.png" style: "max-height:240px;max-width:100%;width:100% !important">'+
+                                      '<a href="/s/<%= id %>/<%= name %>"><img src="./assets/<%= id * 8 %><%= name.length * 8 %>_<%= name.toLowerCase() %>.png" style: "max-height:240px;max-width:100%;width:100% !important"></a>'+
                                     '</div>'+
                                     '<div class="span7">'+
                                       '<div class="info-block">'+
@@ -16,7 +16,7 @@ HackReactor.Views.Website = Backbone.View.extend({
                                           '</small>'+
                                         '</h3>'+
                                         '<div class="info-text">'+
-                                          '<a href="<%= url %>" target="_blank"><span class="color-text"><%= url %></span></a>'+
+                                          '<a href="/s/<%= id %>/<%= name %>" target="_blank"><span class="color-text"><%= url %></span></a>'+
                                           '<p><%= content %></p>'+
                                           '<div class="like-tweet">'+
                                             '<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://hackreactor.herokuapp.com/" data-via="HackReactor" data-related="yolo" data-hashtags="HackReactor" data-dnt="true">Tweet</a>'+
@@ -53,16 +53,12 @@ HackReactor.Views.Website = Backbone.View.extend({
   updateIt: function() {
     this.model.fetch();
   },
-  vote: function(e) {
-    var button = $(e.target).attr('href');
-    var yolo = Number($(button).text());
-    yolo++;
-    $(button).text(yolo+'');
-    return false;
-  },
   render: function() {
     this.$el.empty();
     this.$el.html(this.template(this.model.attributes));
     return this;
+  },
+  reorder: function() {
+
   }
 });

@@ -3,6 +3,12 @@ module Api
     class WebsitesController < ApplicationController
       respond_to :json
 
+      def shortlink
+        puts params
+        @websites = Website.find(params[:id])
+        redirect_to @websites.url
+      end
+
       def banner
         puts '========-serve_banner-========='
         puts params
@@ -17,8 +23,11 @@ module Api
           })
         puts '========-end_serving_banner-========='
         @websites.update_attributes(views: @websites.views+1)
-
-        redirect_to 'https://hackreactor.herokuapp.com/assets/hackrrBanner.png'
+        if params[:banner] == true
+          redirect_to 'https://hackreactor.herokuapp.com/assets/hackrrBanner.png'
+        else
+          redirect_to 'https://hackreactor.herokuapp.com/assets/noBanner.png'
+        end
       end
       def callback
         @websites = Website.all

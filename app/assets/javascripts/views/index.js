@@ -24,14 +24,14 @@ HackReactor.Views.Index = Backbone.View.extend({
     $('#hackreactor-index').html(this.template());
     return this;
   },
-  addOne: function(site) {
-    var website =  new HackReactor.Views.Website({model: site});
+  addOne: function(siteModel) {
+    var website =  new HackReactor.Views.Website({model: siteModel});
     $('#hackreactor-websites').append(website.render().el);
   },
   addAll: function() {
     $('#hackreactor-websites').html(_(this.collection.models).map(function(websiteModel) {
       return new HackReactor.Views.Website({model: websiteModel}).render().el;
     }));
-
   }
+
 });

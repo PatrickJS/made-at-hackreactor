@@ -9,6 +9,7 @@
 <body>
 <pre>
 var builtAtHackReactor = function(options) {
+      options = options || {};
   var windowDomain = window.location.host.split('.'),
       titleDomain = document.querySelector('title').text,
       wwwDomain = windowDomain[0] === 'www' ? windowDomain[1] : windowDomain[0],
@@ -23,8 +24,8 @@ var builtAtHackReactor = function(options) {
       }
     }
   }
+  options.banner = options.banner ? true : false;
   options.url = options.fullUrl ? location.href : options.url || window.location.origin;
-  options.url = options.url.split('?')[0];
   options.name = options.name || name;
   options.github = options.twitter || name;
   options.twitter = options.twitter || name;
@@ -38,17 +39,19 @@ var builtAtHackReactor = function(options) {
   img.style['z-index'] = 99999;
   var query = '?';
   for (var key in options) {
-    if (typeof options[key] === 'string') {
-      query +=  '&'+ key + '=' + options[key];
-    }
+    query +=  '&'+ key + '=' + options[key];
   }
   img.src = url+options.name+".png"+query+'';
-  document.getElementsByTagName('body')[0].appendChild(img);
+  var linkwithimage = document.createElement('a');
+  linkwithimage.setAttribute('href', 'https://hackreactor.herokuapp.com/');
+  linkwithimage.appendChild(img);
+  document.getElementsByTagName('body')[0].appendChild(linkwithimage);
 };
 
 builtAtHackReactor({
   overWriteUrl: 'http://localhost:5100/banner/',
-  fullUrl:true
+  fullUrl:true,
+  banner:false
 });
 </pre>
 </body>

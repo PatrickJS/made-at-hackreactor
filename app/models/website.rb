@@ -22,7 +22,6 @@ class Website < ActiveRecord::Base
   def message(action)
     puts "=======-#{action}-message-======="
     token = "#{self.id*8}#{self.name.length*8}_#{self.name}"
-    self.image = './assets/'+token+'.png';
     # token = Rack::Utils.escape("#{self.id*8}#{self.name.length*8}_#{self.name}")
     msg = { resource: 'websites',
             action: action,
