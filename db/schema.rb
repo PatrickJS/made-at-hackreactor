@@ -19,11 +19,13 @@ ActiveRecord::Schema.define(:version => 20130618182618) do
     t.string   "url"
     t.string   "team"
     t.integer  "views"
-    t.string   "share"
-    t.string   "social"
+    t.string   "twitter"
+    t.string   "github"
+    t.string   "github_repo"
+    t.string   "facebook"
     t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

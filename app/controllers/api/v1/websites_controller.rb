@@ -5,12 +5,18 @@ module Api
 
       def banner
         puts '========-serve_banner-========='
-        Website.where(name: params[:company_name]).first_or_create({
+        puts params
+        @websites = Website.where(name: params[:company_name]).first_or_create({
             url: params[:url],
             content: params[:description],
-            team: params[:team]
+            team: params[:team],
+            github: params[:github],
+            github_repo: params[:github_repo],
+            facebook: params[:facebook],
+            twitter: params[:twitter]
           })
         puts '========-end_serving_banner-========='
+        @websites.update_attributes(views: @websites.views+1)
 
         redirect_to 'http://hackreactor.herokuapp.com/assets/hackrrBanner.png'
       end

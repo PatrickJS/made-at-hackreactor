@@ -12,8 +12,6 @@ HackReactor.Views.Website = Backbone.View.extend({
                                       '<div class="info-block">'+
                                         '<h3 class="spec" style="text-transform:capitalize;"><%= name %>'+
                                           '<small class="pull-right" style="margin-top: 15px;margin-right: 10px;">'+
-                                            // '<span class="color-text">Likes:</span> <span id="Like">0</span> '+
-                                            // '<span class="color-text">Tweets:</span> <span id="Tweet">0</span> '+
                                             '<span class="color-text">Views:</span> <%= views %>'+
                                           '</small>'+
                                         '</h3>'+
@@ -24,7 +22,7 @@ HackReactor.Views.Website = Backbone.View.extend({
                                             '<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://hackreactor.herokuapp.com/" data-via="HackReactor" data-related="yolo" data-hashtags="HackReactor" data-dnt="true">Tweet</a>'+
                                             "<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script><br>"+
                                             '<div class="fb-like" data-href="https://hackreactor.herokuapp.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div><br>'+
-                                            '<iframe src="http://ghbtns.com/github-btn.html?user=gdi2290&repo=slides&type=watch&count=true"allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>'+
+                                            '<iframe src="http://ghbtns.com/github-btn.html?user=<%= github %>&repo=<%= github_repo %>&type=watch&count=true"allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>'+
                                           '</div>'+
                                         '</div>'+
                                       '</div>'+

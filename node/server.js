@@ -3,7 +3,17 @@ var io = require('socket.io').listen(5001),
     fs = require('fs'),
     http = require("http"),
     url = require("url"),
-    webshot = require('webshot');
+    webshot = require('webshot'),
+    im = require('imagemagick');
+
+// im.resize({
+//   srcPath: __dirname + '/koala.jpg',
+//   dstPath: __dirname + '/koala-small.jpg',
+//   width:   '50%'
+// }, function(err, stdout, stderr){
+//   if (err) throw err
+//   console.log('resized');
+// });
 
 redis.subscribe('rt-change');
 
@@ -35,7 +45,6 @@ io.on('connection', function(socket){
         console.log('=========-OK!-=========');
         console.log(message.encoded_token+'.png');
         socket.emit('update_image_'+message.id, message);
-        // screenshot now saved to google.png
       });
     }
 

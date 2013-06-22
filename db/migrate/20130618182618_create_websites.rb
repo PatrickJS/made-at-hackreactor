@@ -6,8 +6,10 @@ class CreateWebsites < ActiveRecord::Migration
       t.string :url
       t.string :team
       t.integer :views
-      t.string :share
-      t.string :social
+      t.string :twitter
+      t.string :github
+      t.string :github_repo
+      t.string :facebook
       t.text :content
 
       t.timestamps

@@ -1,8 +1,5 @@
 class Website < ActiveRecord::Base
-  attr_accessible :content, :team, :url, :views, :name, :share, :social, :image
-  serialize :team
-  serialize :share
-  serialize :social
+  attr_accessible :content, :team, :url, :views, :name, :facebook, :twitter, :github, :github_repo
   after_create {|website| website.message 'create' }
   after_destroy {|website| website.message 'destroy' }
   before_save :update_redis
