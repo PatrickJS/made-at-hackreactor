@@ -5,7 +5,7 @@ var io = require('socket.io').listen(5001),
     url = require("url"),
     webshot = require('webshot');
 
-redis.subscribe('rt-change');
+redis.subscribe('website.change');
 
 io.configure('production', function () {
   io.set("transports", ["xhr-polling"]);
@@ -30,17 +30,16 @@ options = {
 io.on('connection', function(socket) {
   redis.on('message', function(channel, message) {
     message = JSON.parse(message);
-    message.website.image = './assets/'+message.encoded_token+'.png';
+    console.log('=========-received-message-'+message.action+'-=========');
 
-    if (message.action === 'create') {
-
-      socket.emit('rt-change', message);
+      socket.emit('website.change', message);
       console.log('=============-inside-node-server-=============', message);
+    if (message.action === 'create') {
       webshot(message.website.url, './public/assets/'+message.encoded_token.toLowerCase()+'.png', options, function(err) {
         if (err) return console.log(err);
         console.log('=========-OK!-=========');
+        socket.emit('website.update:'+message.action+'.'+message.id, message);
         console.log(message.encoded_token+'.png');
-        socket.emit('update_image_'+message.id, message);
       });
     }
 

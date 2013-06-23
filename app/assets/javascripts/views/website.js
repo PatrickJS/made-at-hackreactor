@@ -33,15 +33,20 @@ HackReactor.Views.Website = Backbone.View.extend({
                         '</div>'+
                       '</div>'),
   initialize: function(){
-    var update_image_ID = 'update_image_'+this.model.attributes.id+'';
+    var update_image_ID = 'website.update:'+this.model.attributes.id+'';
+    var update_views_ID = 'website.update:views.'+this.model.attributes.id+'';
+    HackReactor.Vent.on(update_image_ID, this.reloadImage, this);
+    HackReactor.Vent.on(update_views_ID, this.reloadViews, this);
     this.model.on('change', this.render, this);
     this.model.on('destroy', this.removeIt, this);
-    HackReactor.Socket.on(update_image_ID, this.reloadImage, this);
   },
   events: {
     'click a.button': 'vote'
   },
   reloadImage:  function(message) {
+    this.render();
+  },
+  reloadViews:  function(message) {
     this.render();
   },
   destroyIt: function() {

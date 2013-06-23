@@ -4,15 +4,15 @@
   Collections: {},
   Views: {},
   Routers: {},
-  Socket: _.extend({}, Backbone.Events, {
+  Vent: _.extend({}, Backbone.Events, {
     connect: function() {
-      HackReactor.Socket.io = io.connect('http://10.0.1.66:5001');
-      HackReactor.Socket.io.on('rt-change', function(message) {
-        console.log('================-RT-Change!-================');
-        HackReactor.Socket.trigger('website:change', message);
-        HackReactor.Socket.io.on('update_image_'+message.id, function(data) {
-          console.log('================-listenToimage-================');
-          HackReactor.Socket.trigger('update_image_'+data.id, data);
+      HackReactor.Vent.io = io.connect('http://localhost:5001');
+      HackReactor.Vent.io.on('website.change', function(message) {
+          console.log('================-Website-Change!-================');
+        HackReactor.Vent.trigger('website:change', message);
+        HackReactor.Vent.io.on('website.update:'+message.action+'.'+message.id, function(data) {
+          console.log('================-Image-'+message.id+'-changed!-================');
+          HackReactor.Vent.trigger('website.update:'+data.id, data);
         });
       });
     }
@@ -23,7 +23,7 @@
       websitesCollection.fetch();
       new this.Routers.Websites();
       Backbone.history.start({pushState: true});
-      this.Socket.connect();
+      this.Vent.connect();
 
       console.log('Hello with love from Hack Reactor!');
     }

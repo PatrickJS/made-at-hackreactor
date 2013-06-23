@@ -3,7 +3,7 @@ HackReactor.Collections.Websites = Backbone.Collection.extend({
   model: HackReactor.Models.Website,
 
   initialize: function(){
-    HackReactor.Socket.on('website:change', this.handle_change, this);
+    HackReactor.Vent.on('website:change', this.handle_change, this);
   },
   comparator: function(a,b) {
     a = a.get('views');
@@ -15,6 +15,7 @@ HackReactor.Collections.Websites = Backbone.Collection.extend({
     var model;
     switch(message.action) {
       case 'create':
+      console.log('in add of collection');
         this.add(message.website);
         break;
       case 'update':
@@ -23,6 +24,7 @@ HackReactor.Collections.Websites = Backbone.Collection.extend({
         model.set(message.website);
         break;
       case 'destroy':
+        console.log('in remove in collection');
         this.remove(message.website);
     }
   }
