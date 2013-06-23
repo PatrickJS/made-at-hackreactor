@@ -33,7 +33,8 @@ io.on('connection', function(socket) {
     console.log('=========-received-message-'+message.action+'-=========');
 
       socket.emit('website.change', message);
-      console.log('=============-inside-node-server-=============', message);
+      console.log('=============-inside-node-server-=============');
+      console.log(message);
     if (message.action === 'create') {
       webshot(message.website.url, './public/assets/'+message.encoded_token.toLowerCase()+'.png', options, function(err) {
         if (err) return console.log(err);
@@ -44,6 +45,6 @@ io.on('connection', function(socket) {
     }
 
 
-  });
+  }).setMaxListeners(0);
 
 });

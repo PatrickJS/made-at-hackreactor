@@ -6,15 +6,21 @@ class Website < ActiveRecord::Base
   # after_update :website_update
   after_create {|website| website.message 'create' }
   after_destroy {|website| website.message 'destroy' }
-  before_save :update_redis
+  # before_update :update_views
   after_update {|website| website.message 'update' }
+  before_save :update_redis
   # def before_website_save
+
   def update_redis
     self.views ||= 0
     # $redis.set 'key', 'value'
-    puts '================================='
+    puts '==============Before-Save==================='
     puts '==-Changed?-=='
     puts self.changed?
+    if self.views_changed?
+      # self.views += 1
+      puts "----------Views: #{self.views}------------"
+    end
     puts '==-Changed-=='
     puts self.changed
     puts '==-ID-=='

@@ -15,7 +15,7 @@ HackReactor.Collections.Websites = Backbone.Collection.extend({
     var model;
     switch(message.action) {
       case 'create':
-      console.log('in add of collection');
+        console.log('in add of collection');
         this.add(message.website);
         break;
       case 'update':
