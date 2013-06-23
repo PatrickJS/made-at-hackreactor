@@ -37,12 +37,13 @@ version 1
 version 2
 <pre>
 var builtAtHackReactor = function(options) {
+      options = options || {};
   var windowDomain = window.location.host.split('.'),
       titleDomain = document.querySelector('title').text,
       wwwDomain = windowDomain[0] === 'www' ? windowDomain[1] : windowDomain[0],
       name = titleDomain.length < wwwDomain.length ? titleDomain : wwwDomain,
       meta = document.querySelectorAll('meta'),
-      url = options.overWriteUrl || "https://hackreactor.herokuapp.com/banner";
+      url = options.overWriteUrl || "https://hackreactor.herokuapp.com/banner/";
   if (!options.description) {
     for (var i = 0; i < meta.length; i++) {
       if (meta[i].getAttribute('name') === 'description' || meta[i].getAttribute('property') === "og:description") {
@@ -51,6 +52,7 @@ var builtAtHackReactor = function(options) {
       }
     }
   }
+  options.banner = options.banner ? true : false;
   options.url = options.fullUrl ? location.href : options.url || window.location.origin;
   options.name = options.name || name;
   options.github = options.twitter || name;
@@ -65,17 +67,19 @@ var builtAtHackReactor = function(options) {
   img.style['z-index'] = 99999;
   var query = '?';
   for (var key in options) {
-    if (typeof options[key] === 'string') {
-      query +=  '&'+ key + '=' + options[key];
-    }
+    query +=  '&'+ key + '=' + options[key];
   }
   img.src = url+options.name+".png"+query+'';
-  document.getElementsByTagName('body')[0].appendChild(img);
+  var linkwithimage = document.createElement('a');
+  linkwithimage.setAttribute('href', 'https://hackreactor.herokuapp.com/');
+  linkwithimage.appendChild(img);
+  document.getElementsByTagName('body')[0].appendChild(linkwithimage);
 };
 
 builtAtHackReactor({
   overWriteUrl: 'http://localhost:5100/banner/',
-  fullUrl:true
+  fullUrl:true,
+  banner:false
 });
 </pre>
 

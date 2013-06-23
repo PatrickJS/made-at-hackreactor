@@ -1,5 +1,5 @@
 var io = require('socket.io').listen(5001),
-    redis = require('redis').createClient(6379, '127.0.0.1'), //redis.createClient(port, host, options) // redis.auth(password, callback)
+    redis = require('redis').createClient(/*6379, '127.0.0.1'*/), //redis.createClient(port, host, options) // redis.auth(password, callback)
     fs = require('fs'),
     http = require("http"),
     url = require("url"),
@@ -7,7 +7,7 @@ var io = require('socket.io').listen(5001),
 
 redis.subscribe('rt-change');
 
-io.configure(function () {
+io.configure('production', function () {
   io.set("transports", ["xhr-polling"]);
   io.set("polling duration", 10);
 });

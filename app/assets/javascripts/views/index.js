@@ -15,7 +15,6 @@ HackReactor.Views.Index = Backbone.View.extend({
                       '</div>'
   ),
   initialize: function(){
-    // HackReactor.Socket.on('index', this.render, this);
     this.collection.on('sync', this.addAll, this);
     this.collection.on('add', this.addOne, this);
     this.collection.on('remove', this.addAll, this);
