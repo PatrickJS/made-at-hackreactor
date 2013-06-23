@@ -1,41 +1,27 @@
 # Made at Hack Reactor
 
-bundle install
-gem install foreman
-rake db:migrate
-foreman server -f Procfile.dev
-localhost:5100
+##### Dependencies
+- Foreman  
+$ gem install foreman
+- Redis  
+$ brew install redis  
+- MRI Ruby 2.0.0-p195  
+$ \curl -L https://get.rvm.io | bash -s stable --ruby  
+- Node  
+$ brew install node  
 
-website RESTful API
-/api/websites/:id
-$ curl -H 'Accept:application/vnd.hackreactor.v1' http://localhost:3000/api/websites
 
-Work in Progress scripttag.js
+### Initialize
+ 
+$ bundle install  
+$ npm install node/
+$ rake db:migrate  
+$ foreman server -f Procfile.dev  
+$ localhost:5100  
 
-version 1
-<pre>
-(function() {
-  var HackReactor = {};
-  HackReactor['func'] = function(data) {
-    window['yolo'] = data;
-    this.html = document.createElement(data.create);
-    this.html.src = data.html;
-    document.getElementsByTagName('body')[0].appendChild(this.html);
-  };
-  HackReactor['jsonp'] = function(url, cb) {
-    this.yolo = document.createElement('script');
-    this.rand = 'yolo' + ~~(Math.random()*8888);
-    this.yolo.src = url+'?callback='+this.rand;
-    this.yolo.setAttribute('async', 'true');
-    (document.getElementsByTagName('head') || document.getElementsByTagName('body'))[0].appendChild(this.yolo);
-    window[this.rand] = cb;
-  };
-  HackReactor.jsonp('http://hackreactor.herokuapp.com/callback', HackReactor.func);
-  console.log('Hello with love from Hack Reactor');
-}());
-</pre>
-version 2
-<pre>
+### ScriptTag
+localhost:5100/script  
+```javascript    
 var builtAtHackReactor = function(options) {
       options = options || {};
   var windowDomain = window.location.host.split('.'),
@@ -81,11 +67,19 @@ builtAtHackReactor({
   fullUrl:true,
   banner:false
 });
-</pre>
+```
 
+website RESTful API  
+/api/websites/:id  
+$ curl -H 'Accept:application/vnd.hackreactor.v1' http://localhost:3000/api/websites
 
-
-
+##### TODO:  
+- fix social button loading  
+- fix Font loading  
+- security (whitelist)  
+- posts  
+- better banner  
+- allow for users to login with github for comments
 
 Copyright 2013, [Hack Reactor, LLC](http://hackreactor.com). All rights reserved.
 
