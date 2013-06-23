@@ -5,9 +5,9 @@ HackReactor.Collections.Websites = Backbone.Collection.extend({
   initialize: function(){
     HackReactor.Socket.on('website:change', this.handle_change, this);
   },
-  handle_change : function(message){
+  handle_change: function(message){
     var model;
-    switch(message.action){
+    switch(message.action) {
       case 'create':
         this.add(message.website);
         break;

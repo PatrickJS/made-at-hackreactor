@@ -12,7 +12,8 @@ HackReactor.Views.Index = Backbone.View.extend({
                               '<div id="hackreactor-websites">'+
                               '</div>'+
                           '</div>'+
-                      '</div>'),
+                      '</div>'
+  ),
   initialize: function(){
     // HackReactor.Socket.on('index', this.render, this);
     this.collection.on('sync', this.addAll, this);
@@ -21,7 +22,7 @@ HackReactor.Views.Index = Backbone.View.extend({
   },
   render: function() {
     this.$el.empty();
-    $('#hackreactor-index').html(this.template());
+    $('#hackreactor-index').html( this.template() );
     return this;
   },
   addOne: function(siteModel) {
@@ -29,9 +30,9 @@ HackReactor.Views.Index = Backbone.View.extend({
     $('#hackreactor-websites').append(website.render().el);
   },
   addAll: function() {
-    $('#hackreactor-websites').html(_(this.collection.models).map(function(websiteModel) {
+    $('#hackreactor-websites').html( _( this.collection.models ).map(function(websiteModel) {
       return new HackReactor.Views.Website({model: websiteModel}).render().el;
-    }));
+    }) );
   }
 
 });
