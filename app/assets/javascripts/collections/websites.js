@@ -3,6 +3,7 @@ HackReactor.Collections.Websites = Backbone.Collection.extend({
   model: HackReactor.Models.Website,
 
   initialize: function(){
+    this.fetch();
     HackReactor.Vent.on('website:change', this.handle_change, this);
   },
   comparator: function(a,b) {

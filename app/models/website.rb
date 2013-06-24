@@ -6,10 +6,8 @@ class Website < ActiveRecord::Base
   # after_update :website_update
   after_create {|website| website.message 'create' }
   after_destroy {|website| website.message 'destroy' }
-  # before_update :update_views
   after_update {|website| website.message 'update' }
   before_save :update_redis
-  # def before_website_save
 
   def update_redis
     self.views ||= 0
@@ -18,7 +16,6 @@ class Website < ActiveRecord::Base
     puts '==-Changed?-=='
     puts self.changed?
     if self.views_changed?
-      # self.views += 1
       puts "----------Views: #{self.views}------------"
     end
     puts '==-Changed-=='
@@ -28,15 +25,7 @@ class Website < ActiveRecord::Base
     puts '================================='
     # $redis
   end
-  # def website_create
-  #   $redis.publish 'website.create', msg.to_json
-  # end
-  # def website_destroy
-  #   $redis.publish 'website.destroy', msg.to_json
-  # end
-  # def website_update
-  #   $redis.publish 'website.destroy', msg.to_json
-  # end
+
   def message(action)
     puts "=======-#{action}-message-======="
     token = "#{self.id*8}#{self.name.length*8}_#{self.name}"

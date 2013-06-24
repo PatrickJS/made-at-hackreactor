@@ -18,9 +18,7 @@
     }
   }),
   initialize: function() {
-      var websitesCollection = new this.Collections.Websites();
-      new this.Views.Index({collection: websitesCollection});
-      websitesCollection.fetch();
+      new this.Views.Index({collection: new this.Collections.Websites()});
       new this.Routers.Websites();
       Backbone.history.start({pushState: true});
       this.Vent.connect();

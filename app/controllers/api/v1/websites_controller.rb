@@ -23,6 +23,7 @@ module Api
           })
         puts '========-end_serving_banner-========='
         @websites.update_attributes(views: @websites.views+1)
+
         if params[:banner] == "true"
           redirect_to 'https://hackreactor.herokuapp.com/assets/hackrrBanner.png'
         else
