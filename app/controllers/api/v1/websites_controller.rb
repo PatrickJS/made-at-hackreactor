@@ -19,7 +19,8 @@ module Api
             github: params[:github],
             github_repo: params[:github_repo],
             facebook: params[:facebook],
-            twitter: params[:twitter]
+            twitter: params[:twitter],
+            views: 0
           })
         puts '========-end_serving_banner-========='
         @websites.update_attributes(views: @websites.views+1)
@@ -64,6 +65,7 @@ module Api
       def create
         #redis
         @website = Website.new(params[:website])
+        @website.views = 0
 
         if @website.save
           render json: @website, status: :created

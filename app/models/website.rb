@@ -1,22 +1,18 @@
 class Website < ActiveRecord::Base
   attr_accessible :content, :team, :url, :views, :name, :facebook, :twitter, :github, :github_repo
-  # after_create :website_create
-  # after_destroy :website_destroy
-  # before_save :before_website_save
-  # after_update :website_update
   after_create {|website| website.message 'create' }
   after_destroy {|website| website.message 'destroy' }
   after_update {|website| website.message 'update' }
   before_save :update_redis
 
   def update_redis
-    self.views ||= 0
     # $redis.set 'key', 'value'
     puts '==============Before-Save==================='
     puts '==-Changed?-=='
     puts self.changed?
     if self.views_changed?
-      puts "----------Views: #{self.views}------------"
+      rdb[self.changed].incr
+      puts "----------Views: #{rdb[self.changed].get}------------"
     end
     puts '==-Changed-=='
     puts self.changed

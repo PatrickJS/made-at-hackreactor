@@ -6,17 +6,21 @@ gem 'jquery-rails'
 gem 'unicorn' #an option
 # gem 'thin'
 # gem 'puma' # also an option with rails 4.0 and live controller
-gem 'redis'
-# gem "resque" # future use
-# gem 'rails-observers' # for rails 4.0
-gem "github_api"
 gem 'json'
+gem "github_api"
+# gem 'rails-observers' # for rails 4.0
+# gem "resque" # future use
+gem 'redis'
+gem 'redis-objects'
+gem 'nest'
 
 gem 'bootstrap-sass'
 gem 'backbone-on-rails'
 gem 'icomoon-rails'
 
 group :development do
+  gem 'pry-nav'
+  gem 'pry-rails'
   gem 'sqlite3'
   gem 'better_errors'
   gem 'binding_of_caller'
