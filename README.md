@@ -1,5 +1,7 @@
 # Made at Hack Reactor
 
+<img src="https://dl.dropboxusercontent.com/u/7020515/MadeAtHackReactor/reactiveRails.png">
+
 ##### Dependencies
 - Foreman  
 $ gem install foreman
